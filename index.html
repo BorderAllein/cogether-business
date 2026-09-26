@@ -28,7 +28,6 @@
       <a href="/pro/">Pro</a>
       <a href="/universe/">Universe</a>
     </nav>
-    <a class="top-cta" href="/erstgespraech/">Erstgespräch anfragen →</a>
   </div>
 </header>
 
@@ -38,7 +37,7 @@
     <h1>Deine Arbeit mit Menschen wächst.<br>Deine Infrastruktur wächst mit.</h1>
     <p class="lede">Co;Gether verbindet Coachies, Termine, Learning, Programme, Aufgaben und Business-Prozesse in einer gemeinsamen Infrastruktur – statt Dich zwischen einzelnen Tools wechseln zu lassen. Ob Coaching, Mentoring oder Beratung: Du begleitest Menschen. Dein System kümmert sich um den Rest.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="/erstgespraech/">Passendes Setup besprechen</a>
+      <a class="btn btn-primary js-booking-cta" href="/erstgespraech/">Passendes Setup besprechen</a>
       <a class="btn btn-ghost" href="https://cogether.de/">Co;Gether live ansehen</a>
     </div>
     <p class="price-hint">START ab 129&nbsp;€/Monat · einmalige Einrichtung ab 690&nbsp;€</p>
@@ -172,6 +171,50 @@
         <p>Alle Coachies, Termine und Impulse mit vollem Kontext an einem Ort. Du steigst dort ein, wo Du aufgehört hast – weniger Rekonstruktion vor jedem Gespräch, mehr Aufmerksamkeit für den Menschen vor Dir.</p>
         <a class="btn btn-ghost" href="/grow/">Mehr erfahren →</a>
       </div>
+    </div>
+  </div>
+  <div class="wave"><svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,0 C300,60 900,60 1200,0 L1200,60 L0,60 Z" fill="#0b1723"></path></svg></div>
+</section>
+
+<section>
+  <div class="wrap" style="text-align:center">
+    <span class="kicker">Co;Gether in 90 Sekunden</span>
+    <h2 style="max-width:32ch;margin-inline:auto">So fühlt sich Dein neues System an.</h2>
+    <p class="section-lede" style="margin-inline:auto;margin-bottom:2.2rem">Ein kurzer Einblick in die echte Oberfläche – kein Mockup, keine Animation, sondern das System, das Du ab Tag eins nutzt.</p>
+    <div class="video-showcase">
+      <span class="video-showcase__badge">Live-Einblick</span>
+      <video controls preload="metadata" poster="/assets/img/sven-portrait.jpg">
+        <source src="https://cogether.de/wp-content/uploads/2026/09/CoGether_Mein-CoGether_Praesentation.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap layers-row">
+    <div>
+      <span class="kicker">Die Architektur dahinter</span>
+      <h2>Fünf Ebenen. Ein zusammenhängendes System.</h2>
+      <p class="section-lede" style="margin-bottom:0">Von der Business-Struktur bis zur einzelnen Coachie-Beziehung – jede Ebene greift in die nächste, statt isoliert nebeneinander zu stehen.</p>
+    </div>
+    <div class="layers">
+      <div class="layers__stack">
+        <div class="layer">Business-Struktur <span>Fundament</span></div>
+        <div class="layer">Programme &amp; Learning <span>Inhalt</span></div>
+        <div class="layer">Termine &amp; Kalender <span>Rhythmus</span></div>
+        <div class="layer">Mitgliederbereich <span>Erlebnis</span></div>
+        <div class="layer">Coachies &amp; Verlauf <span>Kern</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="testimonial2">
+      <div class="testimonial2__photo"><img src="/assets/img/sven-portrait.jpg" alt="Sven"></div>
+      <blockquote>„Wir haben Co;Gether nicht gebaut, weil uns eine Softwareidee fehlte. Wir haben es gebaut, weil wir dieselbe Fragmentierung in unserer eigenen Coachingarbeit erlebt haben.“</blockquote>
+      <cite>Sven, Gründer, Coach &amp; Ausbilder</cite>
     </div>
   </div>
 </section>
@@ -348,7 +391,7 @@
   <div class="wrap">
     <h2>Coaching bleibt menschlich. Die Organisation darf das System übernehmen.</h2>
     <p>Lass uns in einem kurzen Erstgespräch schauen, welches Setup zu Deinem Coaching-Business passt.</p>
-    <a class="btn btn-primary" href="/erstgespraech/">Erstgespräch anfragen →</a>
+    <a class="btn btn-primary js-booking-cta" href="/erstgespraech/">Erstgespräch anfragen →</a>
   </div>
 </section>
 
@@ -370,5 +413,6 @@ document.getElementById('navtoggle').addEventListener('click', function(){
   this.setAttribute('aria-expanded', open ? 'true' : 'false');
 });
 </script>
+<script src="/assets/booking-modal.js?v=1" defer></script>
 </body>
 </html>
