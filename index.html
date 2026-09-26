@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coaching-Software für Coaches &amp; Unternehmen | Co;Gether Business</title>
+<meta name="description" content="Co;Gether verbindet Coachies, Termine, Learning, Programme und Business-Prozesse in einer gemeinsamen Coaching-Infrastruktur. Für Coaches & Unternehmen.">
+<link rel="canonical" href="https://business.cogether.de/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Coaching-Software für Coaches & Unternehmen | Co;Gether Business">
+<meta property="og:description" content="Co;Gether verbindet Coachies, Termine, Learning, Programme und Business-Prozesse in einer gemeinsamen Coaching-Infrastruktur.">
+<meta property="og:url" content="https://business.cogether.de/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0b1723;
+    --ink-soft:#07111b;
+    --teal:#4f8f98;
+    --teal-light:#67aab3;
+    --orange:#d08a67;
+    --border:rgba(255,255,255,.14);
+    --muted:rgba(255,255,255,.72);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:'Inter',system-ui,-apple-system,sans-serif;
+    background:var(--ink);
+    color:#fff;
+    line-height:1.55;
+    -webkit-text-size-adjust:100%;
+  }
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  .wrap{width:min(1100px,100% - 3rem);margin:0 auto}
+  header.site{
+    background:var(--ink-soft);
+    border-bottom:1px solid var(--border);
+    padding:1.1rem 0;
+  }
+  header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+  .brand{font-weight:800;font-size:1.3rem;letter-spacing:-.01em;text-decoration:none}
+  .brand span{color:var(--teal-light)}
+  .brand small{display:block;font-size:.62rem;font-weight:600;letter-spacing:.09em;color:var(--muted);text-transform:uppercase;margin-top:.15rem}
+  .top-cta{
+    display:inline-flex;align-items:center;gap:.4rem;
+    background:var(--teal);color:#fff!important;text-decoration:none!important;
+    padding:.68rem 1.15rem;border-radius:999px;font-weight:700;font-size:.88rem;
+    white-space:nowrap;transition:.2s ease;
+  }
+  .top-cta:hover{background:var(--teal-light);transform:translateY(-1px)}
+
+  .hero{padding:5rem 0 4rem;background:radial-gradient(1200px 500px at 80% -10%,rgba(79,143,152,.18),transparent)}
+  .eyebrow{
+    display:inline-block;color:var(--orange);font-weight:700;font-size:.78rem;
+    letter-spacing:.1em;text-transform:uppercase;margin-bottom:1.1rem;
+  }
+  h1{font-size:clamp(2rem,4.5vw,3.1rem);line-height:1.12;letter-spacing:-.02em;margin:0 0 1.2rem;font-weight:800}
+  .lede{font-size:clamp(1.05rem,1.6vw,1.25rem);color:var(--muted);max-width:640px;margin:0 0 2rem}
+  .cta-row{display:flex;gap:.9rem;flex-wrap:wrap;margin-bottom:1.6rem}
+  .btn{
+    display:inline-flex;align-items:center;gap:.5rem;text-decoration:none!important;
+    padding:.95rem 1.5rem;border-radius:999px;font-weight:700;font-size:.95rem;transition:.2s ease;
+  }
+  .btn-primary{background:#fff;color:var(--ink)!important}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 30px -14px rgba(255,255,255,.4)}
+  .btn-ghost{border:1px solid var(--border);color:#fff!important}
+  .btn-ghost:hover{background:rgba(255,255,255,.06)}
+  .price-hint{color:var(--muted);font-size:.92rem}
+  .checks{display:flex;flex-wrap:wrap;gap:.6rem 1.4rem;margin-top:1.4rem;padding:0;list-style:none;font-size:.86rem;color:var(--muted)}
+  .checks li:before{content:"✓ ";color:var(--teal-light);font-weight:800}
+
+  section{padding:4.5rem 0}
+  section.alt{background:var(--ink-soft)}
+  h2{font-size:clamp(1.5rem,2.6vw,2.1rem);letter-spacing:-.015em;margin:0 0 1rem;font-weight:800}
+  .section-lede{color:var(--muted);max-width:680px;font-size:1.05rem;margin-bottom:2.5rem}
+  .kicker{color:var(--orange);font-weight:700;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;margin-bottom:.6rem;display:block}
+
+  .grid{display:grid;gap:1.4rem}
+  .grid-4{grid-template-columns:repeat(4,1fr)}
+  .grid-3{grid-template-columns:repeat(3,1fr)}
+  .grid-2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:900px){.grid-4{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}}
+  @media(max-width:520px){.grid-4{grid-template-columns:1fr}}
+
+  .card{
+    background:rgba(255,255,255,.035);border:1px solid var(--border);border-radius:16px;
+    padding:1.5rem;
+  }
+  .card h3{margin:0 0 .5rem;font-size:1.02rem;font-weight:700}
+  .card p{margin:0;color:var(--muted);font-size:.9rem}
+
+  .system-list{display:grid;gap:.9rem;grid-template-columns:repeat(2,1fr)}
+  @media(max-width:700px){.system-list{grid-template-columns:1fr}}
+  .system-item{display:flex;gap:.9rem;padding:1.1rem;border:1px solid var(--border);border-radius:14px;background:rgba(255,255,255,.03)}
+  .system-item .n{flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:rgba(79,143,152,.22);color:var(--teal-light);display:grid;place-items:center;font-weight:800;font-size:.85rem}
+  .system-item h4{margin:0 0 .3rem;font-size:.95rem;font-weight:700}
+  .system-item p{margin:0;color:var(--muted);font-size:.85rem}
+
+  .pricing-grid{display:grid;gap:1.3rem;grid-template-columns:repeat(4,1fr)}
+  @media(max-width:1000px){.pricing-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.pricing-grid{grid-template-columns:1fr}}
+  .plan{
+    border:1px solid var(--border);border-radius:18px;padding:1.6rem;background:rgba(255,255,255,.03);
+    display:flex;flex-direction:column;gap:.9rem;
+  }
+  .plan.featured{border-color:var(--teal-light);background:rgba(79,143,152,.09)}
+  .plan .tag{color:var(--orange);font-weight:700;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+  .plan .price{font-size:1.5rem;font-weight:800}
+  .plan .price small{font-size:.75rem;font-weight:600;color:var(--muted)}
+  .plan ul{margin:0;padding-left:1.1rem;color:var(--muted);font-size:.85rem;display:flex;flex-direction:column;gap:.4rem}
+  .plan .setup{font-size:.8rem;color:var(--muted);border-top:1px solid var(--border);padding-top:.8rem}
+  .plan a.btn{margin-top:auto;justify-content:center;width:100%}
+
+  .final-cta{
+    text-align:center;padding:4.5rem 0;
+    background:linear-gradient(180deg,var(--ink) 0%,var(--ink-soft) 100%);
+  }
+  .final-cta h2{margin-bottom:.8rem}
+  .final-cta p{color:var(--muted);max-width:560px;margin:0 auto 2rem}
+
+  footer{padding:2.6rem 0;border-top:1px solid var(--border);background:var(--ink-soft)}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:.85rem;color:var(--muted)}
+  footer a{text-decoration:none;color:var(--muted)}
+  footer a:hover{color:#fff}
+  footer nav{display:flex;gap:1.3rem;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/">Co<span>;</span>Gether <small>Für Coaches &amp; Unternehmen</small></a>
+    <a class="top-cta" href="https://cogether.de/kontakt/#kontaktformular">Erstgespräch anfragen →</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Coaching-Software für Coaches &amp; Unternehmen</span>
+    <h1>Dein Coaching wächst.<br>Deine Infrastruktur wächst mit.</h1>
+    <p class="lede">Co;Gether verbindet Coachies, Termine, Learning, Programme, Aufgaben und Business-Prozesse in einer gemeinsamen Coaching-Infrastruktur – statt Dich zwischen einzelnen Tools wechseln zu lassen. Du coachst Menschen. Dein System kümmert sich um den Rest.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://cogether.de/kontakt/#kontaktformular">Passendes Setup besprechen</a>
+      <a class="btn btn-ghost" href="https://cogether.de/">Co;Gether live ansehen</a>
+    </div>
+    <p class="price-hint">START ab 129&nbsp;€/Monat · einmalige Einrichtung ab 690&nbsp;€</p>
+    <ul class="checks">
+      <li>persönliches Setup</li>
+      <li>persönlich begleitet</li>
+      <li>DSGVO-orientiert</li>
+      <li>für Coach &amp; Coachie</li>
+    </ul>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <span class="kicker">Kommt Dir das bekannt vor?</span>
+    <h2>Nicht zu wenige Tools. Zu wenig Zusammenhang.</h2>
+    <p class="section-lede">Termine, Kundendaten, PDFs, Handouts, Impulse, Nachrichten, Learning, Programme und Vertrieb liegen bei den meisten Coaching-Unternehmen verteilt. Jedes Tool ist für sich gut. Das Problem entsteht dazwischen.</p>
+    <div class="grid grid-4">
+      <div class="card"><h3>Vor dem Termin</h3><p>Du suchst Notizen, letzte Aufgaben oder Dateien zusammen.</p></div>
+      <div class="card"><h3>Nach dem Coaching</h3><p>Handouts, Impulse und Follow-ups werden wieder manuell verteilt.</p></div>
+      <div class="card"><h3>Für Kund:innen</h3><p>Termine, Links, Inhalte und Materialien leben an verschiedenen Orten.</p></div>
+      <div class="card"><h3>Beim Wachstum</h3><p>Mehr Coachies bedeuten plötzlich mehr Administration statt nur mehr Coaching.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="kicker">Ein System statt Tool-Puzzle</span>
+    <h2>Alles, was Dein Coaching zusammenhält. An einem Ort.</h2>
+    <p class="section-lede">Sechs echte Arbeitsbereiche, die gemeinsam denselben Coachingprozess tragen – die Bausteine bleiben unterscheidbar, ihr Kontext bleibt zusammen.</p>
+    <div class="system-list">
+      <div class="system-item"><div class="n">1</div><div><h4>Coachies &amp; Verlauf</h4><p>Alle Kund:innen mit Kontext, Verlauf und nächsten Schritten an einem Ort.</p></div></div>
+      <div class="system-item"><div class="n">2</div><div><h4>Mitgliederbereich</h4><p>Ein professioneller digitaler Ort für Termine, Learning, Impulse und Materialien.</p></div></div>
+      <div class="system-item"><div class="n">3</div><div><h4>Learning &amp; Programme</h4><p>Dein Know-how wird strukturiert nutzbar – im 1:1, in Gruppen und Programmen.</p></div></div>
+      <div class="system-item"><div class="n">4</div><div><h4>Impulse &amp; Aufgaben</h4><p>Entwicklung läuft zwischen den Sessions weiter, ohne jedes Follow-up neu zu bauen.</p></div></div>
+      <div class="system-item"><div class="n">5</div><div><h4>Termine</h4><p>Termine sind nicht isoliert, sondern direkt mit der jeweiligen Kundenarbeit verbunden.</p></div></div>
+      <div class="system-item"><div class="n">6</div><div><h4>Business-Struktur</h4><p>Weniger Übergaben, weniger Sucherei, mehr reproduzierbare Abläufe für Dein Unternehmen.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <span class="kicker">Produkt statt PowerPoint</span>
+    <h2>Deine Marke. Deine Landingpage. Bereits inklusive.</h2>
+    <p class="section-lede">Nicht noch ein Tool, sondern Dein eigener digitaler Markenauftritt – vollständig integriert in Co;Gether. Individuell gestaltet, SEO-orientiert aufgebaut und direkt mit Deiner Coaching-Infrastruktur verbunden. In jedem Co;Gether-Paket inklusive.</p>
+    <div class="grid grid-3">
+      <div class="card"><h3>Individuelle Gestaltung</h3><p>Nach Deiner Farbwelt, Positionierung und Deinem Look &amp; Feel.</p></div>
+      <div class="card"><h3>SEO-orientierte Basis</h3><p>Technisch und inhaltlich auf Auffindbarkeit ausgerichtet.</p></div>
+      <div class="card"><h3>Lead- &amp; Buchungsstruktur</h3><p>Klar auf Anfragen und Terminbuchungen ausgerichtet.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="preise">
+  <div class="wrap">
+    <span class="kicker">Was kaufst Du hier eigentlich?</span>
+    <h2>Nicht mehr Software. Die passende Infrastruktur für Deine nächste Unternehmensstufe.</h2>
+    <p class="section-lede">Der Preis steigt mit dem Anspruch an Einrichtung, Prozesskomplexität und der Tiefe, mit der Co;Gether Dein Coaching-Business abbildet.</p>
+    <div class="pricing-grid">
+      <div class="plan">
+        <span class="tag">01 · Start</span>
+        <div class="price">129&nbsp;€ <small>/ Monat</small></div>
+        <p style="color:var(--muted);font-size:.88rem;margin:0">Professionell digital starten – für Solo-Coaches und kleinere Betriebe.</p>
+        <ul><li>Zentrale Kundenarbeit</li><li>Professioneller Mitgliederbereich</li><li>Termine, Impulse &amp; Learning in einer Logik</li></ul>
+        <div class="setup">690&nbsp;€ einmalige Einrichtung</div>
+        <a class="btn btn-ghost" href="https://cogether.de/kontakt/#kontaktformular">START kennenlernen</a>
+      </div>
+      <div class="plan featured">
+        <span class="tag">02 · Grow</span>
+        <div class="price">199&nbsp;€ <small>/ Monat</small></div>
+        <p style="color:var(--muted);font-size:.88rem;margin:0">Wachstum systematisieren – für mehr Kund:innen, Gruppen &amp; Programme.</p>
+        <ul><li>Wiederkehrende Programme &amp; Abläufe</li><li>Weniger manuelle Übergaben</li><li>Mehr Struktur bei wachsender Kundenzahl</li></ul>
+        <div class="setup">1.490&nbsp;€ einmalige Einrichtung</div>
+        <a class="btn btn-primary" href="https://cogether.de/kontakt/#kontaktformular">GROW kennenlernen</a>
+      </div>
+      <div class="plan">
+        <span class="tag">03 · Pro</span>
+        <div class="price">399&nbsp;€ <small>/ Monat</small></div>
+        <p style="color:var(--muted);font-size:.88rem;margin:0">Komplexität professionell steuern – für etablierte Unternehmen.</p>
+        <ul><li>Mehrere operative Bereiche zusammenführen</li><li>Höhere Prozess- &amp; Angebotskomplexität</li><li>Infrastruktur unabhängig von Einzelpersonen</li></ul>
+        <div class="setup">2.990&nbsp;€ einmalige Einrichtung</div>
+        <a class="btn btn-ghost" href="https://cogether.de/kontakt/#kontaktformular">PRO kennenlernen</a>
+      </div>
+      <div class="plan">
+        <span class="tag">04 · Universe</span>
+        <div class="price">Auf Anfrage</div>
+        <p style="color:var(--muted);font-size:.88rem;margin:0">Individuelle Business-Infrastruktur – wenn Standardpakete nicht passen.</p>
+        <ul><li>Setup außerhalb der Standardlogik</li><li>Anpassung an besondere Prozesse</li><li>Strategische Begleitung beim Systemaufbau</li></ul>
+        <div class="setup">Umfang nach Rücksprache</div>
+        <a class="btn btn-ghost" href="https://cogether.de/kontakt/#kontaktformular">UNIVERSE anfragen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="wrap">
+    <h2>Coaching bleibt menschlich. Die Organisation darf das System übernehmen.</h2>
+    <p>Lass uns in einem kurzen Erstgespräch schauen, welches Setup zu Deinem Coaching-Business passt.</p>
+    <a class="btn btn-primary" href="https://cogether.de/kontakt/#kontaktformular">Erstgespräch anfragen →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="y"></span> Co;Gether</span>
+    <nav>
+      <a href="https://cogether.de/">Zur Coaching-Plattform</a>
+      <a href="https://cogether.de/impressum/">Impressum</a>
+      <a href="https://cogether.de/datenschutz/">Datenschutz</a>
+    </nav>
+  </div>
+</footer>
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
