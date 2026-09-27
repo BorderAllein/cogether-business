@@ -513,3 +513,13 @@ section.dark .tier-meta b{color:#fff}
   .founder--xl blockquote{font-size:1.1rem}
   .layers--xl .layer{padding:1.1rem 1.3rem;font-size:.95rem}
 }
+
+.plan-includes{margin:0;font-size:.82rem;font-weight:700;color:var(--teal-deep)}
+.plan-includes--config{color:var(--orange);font-weight:600;font-size:.85rem;line-height:1.5}
+
+.compare__hint{display:none;text-align:right;font-size:.78rem;color:var(--muted);margin:1.4rem 0 .4rem}
+@media(max-width:820px){
+  .compare__hint{display:block}
+  .compare__table{min-width:540px;font-size:.78rem}
+  .compare__table th,.compare__table td{padding:.65rem .7rem}
+}
