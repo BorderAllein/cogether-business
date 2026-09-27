@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/style.css?v=6">
+<link rel="stylesheet" href="/assets/style.css?v=8">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -69,48 +69,54 @@
 </head>
 <body class="home">
 
-<header class="site">
+<header class="site sv2-header">
   <div class="wrap">
     <a class="brand" href="/">Co<span>;</span>Gether <small>Für Coaching, Mentoring, Beratung &amp; Ausbildung</small></a>
     <button class="navtoggle" aria-label="Menü öffnen" aria-expanded="false" id="navtoggle">☰</button>
     <nav class="mainnav" id="mainnav">
-      <a href="/" aria-current="page">Home</a>
       <a href="/start/">Start</a>
       <a href="/grow/">Grow</a>
       <a href="/pro/">Pro</a>
       <a href="/universe/">Universe</a>
       <a href="/kontakt/">Kontakt</a>
     </nav>
-    <a class="top-cta js-booking-cta" href="/erstgespraech/">Beratung buchen →</a>
+    <a class="sv2-pill-cta js-booking-cta" href="/erstgespraech/">Beratung buchen</a>
   </div>
 </header>
 
 <!-- 1 HERO -->
-<section class="hero">
-  <div class="wrap hero__grid">
-    <div class="hero__content">
-      <span class="eyebrow">Für Coaching, Mentoring, Beratung, Ausbildung &amp; Training</span>
-      <h1>Die Infrastruktur für professionelle Begleitung.</h1>
-      <p class="lede">Co;Gether verbindet Menschen, Termine, Learning, Programme, Aufgaben und Business-Prozesse in einer gemeinsamen Infrastruktur – statt Dich zwischen einzelnen Tools wechseln zu lassen. Egal in welcher Form Du andere professionell begleitest: Du übernimmst die Beziehung. Dein System kümmert sich um den Rest.</p>
-      <div class="cta-row">
-        <a class="btn btn-primary js-booking-cta" href="/erstgespraech/">Beratung buchen</a>
-        <a class="btn btn-ghost" href="https://cogether.de/">Co;Gether live ansehen</a>
+<section class="sv2-hero">
+  <div class="sv2-hero__inner">
+    <div class="sv2-hero__copy">
+      <span class="sv2-hero__eyebrow">Für Coaching, Mentoring, Beratung, Ausbildung &amp; Training</span>
+      <h1>Die Infrastruktur für <em>professionelle Begleitung.</em></h1>
+      <p class="sv2-hero__lede">Co;Gether verbindet Menschen, Termine, Learning, Programme, Aufgaben und Business-Prozesse in einer gemeinsamen Infrastruktur – statt Dich zwischen einzelnen Tools wechseln zu lassen. Du übernimmst die Beziehung. Dein System kümmert sich um den Rest.</p>
+      <div class="sv2-hero__ctas">
+        <a class="sv2-pill-cta sv2-pill-cta--lg js-booking-cta" href="/erstgespraech/">Beratung buchen</a>
+        <a class="sv2-text-link sv2-text-link--light js-qualifier-cta" href="#">Setup-Finder starten (30 Sek.) →</a>
       </div>
-      <p class="price-hint" style="margin-bottom:.4rem">30 Min · kostenfrei · unverbindlich · per Video</p>
-      <p class="price-hint"><a href="#" class="js-qualifier-cta" style="color:var(--teal-light);text-decoration:underline!important">Nicht sicher, welche Stufe passt? Setup-Finder starten (30 Sek.) →</a></p>
-      <p class="price-hint">START ab 129&nbsp;€/Monat · einmalige Einrichtung ab 690&nbsp;€</p>
-      <ul class="checks">
+      <ul class="sv2h-hero-checks">
         <li>persönliches Setup</li>
         <li>persönlich begleitet</li>
         <li>DSGVO-orientiert</li>
         <li>für Begleiter:in &amp; Klient:in</li>
       </ul>
     </div>
-    <div class="hero__media">
-      <img src="/assets/img/sven-portrait.jpg" alt="Sven, Gründer von Co;Gether" loading="eager">
+    <div class="sv2-hero__media">
+      <img src="/assets/img/sven-portrait.jpg" alt="Sven, Gründer von Co;Gether" width="900" height="1100" loading="eager">
+      <div class="sv2-hero__benefit">
+        <span class="sv2-hero__benefit-icon">✓</span>
+        <div>
+          <h5>Eine Infrastruktur, vier Stufen</h5>
+          <p>START, GROW, PRO und UNIVERSE laufen auf demselben System – je nach Reifegrad Deines Business.</p>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="wave"><svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,0 C300,60 900,60 1200,0 L1200,60 L0,60 Z" fill="#ffffff"></path></svg></div>
+  <div class="sv2-hero__bottom">
+    <span>START ab 129&nbsp;€/Monat · Einrichtung ab 690&nbsp;€</span>
+    <span>30 Min · kostenfrei · unverbindlich · per Video</span>
+  </div>
 </section>
 
 <!-- 2 TRUST/PROOF -->
@@ -124,7 +130,7 @@
 </section>
 
 <!-- 3 PROBLEM VISUAL -->
-<section class="dark">
+<section class="dark" id="sv2h-problem">
   <div class="wrap" style="text-align:center">
     <span class="kicker">Kommt Dir das bekannt vor?</span>
     <h2 style="max-width:32ch;margin-inline:auto">Nicht zu wenige Tools. Zu wenig Zusammenhang.</h2>
@@ -150,19 +156,21 @@
 </section>
 
 <!-- 4 SYSTEM GRAPHIC -->
-<section>
-  <div class="wrap" style="text-align:center">
-    <span class="kicker">Was Co;Gether eigentlich tut</span>
-    <h2 style="max-width:34ch;margin-inline:auto">Ein System. Fünf verbundene Ebenen.</h2>
-    <p class="section-lede" style="margin-inline:auto">Coachies &amp; Verlauf, Mitgliederbereich, Learning &amp; Programme, Termine, Impulse &amp; Aufgaben, Business-Struktur – sechs Arbeitsbereiche, gemeinsam getragen von derselben Architektur, statt isoliert nebeneinander zu stehen.</p>
-    <div class="layers layers--xl" style="margin-top:3rem">
-      <div class="layers__stack">
-        <div class="layer">Menschen &amp; Rollen <span>Fundament</span></div>
-        <div class="layer">Coaching &amp; Learning <span>Inhalt</span></div>
-        <div class="layer">Prozesse &amp; Automationen <span>Rhythmus</span></div>
-        <div class="layer">Kommunikation &amp; Daten <span>Kontext</span></div>
-        <div class="layer">Business &amp; Finance <span>Steuerung</span></div>
+<section class="sv2-section">
+  <div class="sv2-wrap" style="text-align:center">
+    <span class="sv2-eyebrow" style="justify-content:center;display:inline-flex;width:100%">Was Co;Gether eigentlich tut</span>
+    <h2 class="sv2-h2" style="max-width:34ch;margin-inline:auto">Fünf Ebenen. <em>Eine gemeinsame Logik.</em></h2>
+    <p class="sv2-lead" style="margin-inline:auto">Menschen &amp; Rollen, Coaching &amp; Learning, Prozesse &amp; Automationen, Kommunikation &amp; Daten, Business &amp; Finance – getragen von derselben Architektur, statt isoliert nebeneinander zu stehen.</p>
+    <div class="sv2-system-panel" style="max-width:720px;margin:2.4rem auto 0;aspect-ratio:16/11">
+      <div class="sv2-diamond" id="sv2-diamond-home">
+        <div class="sv2-diamond-point" style="top:8%;left:8%;--sx:-80px;--sy:50px">Menschen &amp; Rollen</div>
+        <div class="sv2-diamond-point" style="top:6%;right:6%;--sx:75px;--sy:-45px">Coaching &amp; Learning</div>
+        <div class="sv2-diamond-point" style="top:46%;left:2%;--sx:-95px;--sy:-15px">Prozesse &amp; Automationen</div>
+        <div class="sv2-diamond-point" style="top:46%;right:2%;--sx:90px;--sy:20px">Kommunikation &amp; Daten</div>
+        <div class="sv2-diamond-point" style="bottom:8%;left:36%;--sx:-30px;--sy:70px">Business &amp; Finance</div>
+        <div class="sv2-diamond-point--core">Co;Gether<br>System</div>
       </div>
+      <span class="sv2-system-panel__label">Fünf Ebenen, eine Architektur</span>
     </div>
   </div>
 </section>
@@ -391,11 +399,13 @@
 
 <!-- 9 PRODUCT PROOF -->
 <section class="light">
-  <div class="wrap" style="text-align:center">
-    <span class="kicker">Product Proof</span>
-    <h2 style="max-width:32ch;margin-inline:auto">So fühlt sich Dein neues System an.</h2>
-    <p class="section-lede" style="margin-inline:auto;margin-bottom:2.2rem">Ein kurzer Einblick in die echte Oberfläche – kein Mockup, keine Animation, sondern das System, das Du ab Tag eins nutzt.</p>
-    <div class="video-showcase video-showcase--xl">
+  <div class="wrap sv2h-video-section">
+    <div class="sv2h-video-section__text">
+      <span class="sv2-eyebrow">Product Proof</span>
+      <h2 class="sv2-h2">So fühlt sich Dein neues System an.</h2>
+      <p class="sv2-lead">Ein kurzer Einblick in die echte Oberfläche – kein Mockup, sondern das System, das Du ab Tag eins nutzt.</p>
+    </div>
+    <div class="video-showcase">
       <span class="video-showcase__badge">Live-Einblick</span>
       <video controls preload="metadata" poster="/assets/img/sven-portrait.jpg">
         <source src="https://cogether.de/wp-content/uploads/2026/09/CoGether_Mein-CoGether_Praesentation.mp4" type="video/mp4">
@@ -503,9 +513,21 @@
 <!-- 11 FAQ -->
 <section>
   <div class="wrap">
-    <span class="kicker" style="text-align:center;display:block">Häufige Fragen</span>
-    <h2 style="text-align:center;max-width:28ch;margin-inline:auto">Bevor Du Dich entscheidest.</h2>
+    <span class="sv2-eyebrow" style="justify-content:center;display:inline-flex;width:100%">Häufige Fragen</span>
+    <h2 class="sv2-h2" style="text-align:center;max-width:28ch;margin-inline:auto">Bevor Du Dich entscheidest.</h2>
     <div class="home-faq__list" style="max-width:720px;margin:2rem auto 0;display:flex;flex-direction:column;gap:.8rem">
+      <details class="faq-item">
+        <summary>Für wen ist Co;Gether gedacht?</summary>
+        <p>Für jede Form professioneller Begleitung – Coaching, Mentoring, Beratung, Ausbildung und Training. Nicht nur für Coaches, sondern für alle, die Menschen strukturiert begleiten.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Welches Paket passt zu mir?</summary>
+        <p>Das hängt von Deiner aktuellen Kundenzahl, Arbeitsweise und Prozesskomplexität ab – von START für den professionellen Einstieg bis UNIVERSE für individuelle Architektur. Wir klären das gern im Erstgespräch oder im Setup-Finder.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Kann ich später wechseln?</summary>
+        <p>Ja, jederzeit. Alle Stufen laufen auf derselben Infrastruktur – ein Wechsel bedeutet mehr Konfiguration, kein neues System und kein erneutes Einarbeiten.</p>
+      </details>
       <details class="faq-item">
         <summary>Wie sicher sind die Daten meiner Kund:innen?</summary>
         <p>Co;Gether ist DSGVO-orientiert aufgebaut. Sensible Inhalte wie private Notizen sind strukturell von der Kundensicht getrennt, nicht nur durch eine Einstellung.</p>
@@ -515,37 +537,54 @@
         <p>Die Einrichtung läuft in vier Schritten: Verstehen, Strukturieren, Einrichten, Go-Live. Du bekommst kein leeres System, sondern ein auf Deine Arbeitsweise zugeschnittenes Setup.</p>
       </details>
       <details class="faq-item">
-        <summary>Wie viel Aufwand entsteht für mich oder mein Team?</summary>
-        <p>Du wirst beim Aufbau persönlich begleitet statt mit einem Login allein gelassen zu werden. Der laufende Aufwand sinkt in der Regel, weil wiederkehrende Abläufe im System statt im Kopf liegen.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Was, wenn ich mir bei der passenden Stufe unsicher bin?</summary>
-        <p>Das klären wir im kostenfreien Erstgespräch gemeinsam anhand Deiner aktuellen Kundenzahl, Arbeitsweise und Prozesskomplexität – nicht durch Rätselraten vorab.</p>
+        <summary>Wie läuft ein Erstgespräch ab?</summary>
+        <p>30 Minuten, kostenfrei, unverbindlich, per Video. Wir schauen gemeinsam auf Deine Ausgangslage und klären, welche Stufe und welches Setup zu Dir passen.</p>
       </details>
     </div>
   </div>
 </section>
 
 <!-- 12 FINAL CTA -->
-<section class="final-cta">
-  <div class="wave-in"><svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,0 C300,60 900,60 1200,0 L1200,60 L0,60 Z" fill="#0b1723"></path></svg></div>
-  <div class="wrap">
-    <h2>Professionelle Begleitung bleibt menschlich. Die Organisation darf das System übernehmen.</h2>
-    <p>Lass uns in einem kurzen, kostenfreien Gespräch schauen, welches Setup zu Deinem Business passt.</p>
-    <a class="btn btn-primary js-booking-cta" href="/erstgespraech/">Beratung buchen →</a>
+<section class="sv2-cta sv2-section">
+  <div class="sv2-wrap" style="max-width:52rem">
+    <span class="sv2-eyebrow sv2-eyebrow--light">Der erste Schritt gehört Dir</span>
+    <h2 class="sv2-h2" style="color:#fff">Professionelle Begleitung bleibt menschlich. <em>Die Organisation darf das System übernehmen.</em></h2>
+    <p style="color:#c3d4d8;font-size:.95rem;line-height:1.65;margin:0 0 1.4rem">Lass uns in einem kurzen, kostenfreien Gespräch schauen, welches Setup zu Deinem Business passt.</p>
+    <a class="sv2-pill-cta sv2-pill-cta--lg js-booking-cta" href="/erstgespraech/">Beratung buchen</a>
   </div>
 </section>
 
-<footer>
-  <div class="wrap">
-    <span>© <span id="y"></span> Co;Gether</span>
-    <nav>
-      <a href="https://cogether.de/">Zur Coaching-Plattform</a>
+<footer class="sv2-footer">
+  <div class="sv2-wrap sv2-footer__main">
+    <div class="sv2-footer__brand-block">
+      <div class="sv2-footer__brand">Co<span>;</span>Gether</div>
+      <p class="sv2-footer__tag">Die Infrastruktur für professionelle Begleitung – Coaching, Mentoring, Beratung, Ausbildung &amp; Training.</p>
+    </div>
+    <div class="sv2-footer__col">
+      <span class="sv2-footer__label">Entdecken</span>
+      <a href="/">Home</a>
+      <a href="/kontakt/">Kontakt</a>
+    </div>
+    <div class="sv2-footer__col">
+      <span class="sv2-footer__label">Angebote</span>
+      <a href="/start/">Start</a>
+      <a href="/grow/">Grow</a>
+      <a href="/pro/">Pro</a>
+      <a href="/universe/">Universe</a>
+    </div>
+    <div class="sv2-footer__col">
+      <span class="sv2-footer__label">Rechtliches</span>
       <a href="https://cogether.de/impressum/">Impressum</a>
       <a href="https://cogether.de/datenschutz/">Datenschutz</a>
-    </nav>
+    </div>
+  </div>
+  <div class="sv2-wrap sv2-footer__bottom">
+    <span>© <span id="y"></span> Co;Gether Business</span>
+    <span>Mit Haltung. Mit Struktur. Gemeinsam.</span>
+    <a href="https://cogether.de/">Zur Coaching-Plattform</a>
   </div>
 </footer>
+<script src="/assets/sv2-reveal.js?v=1"></script>
 <script>
 document.getElementById('y').textContent = new Date().getFullYear();
 document.getElementById('navtoggle').addEventListener('click', function(){
@@ -553,6 +592,35 @@ document.getElementById('navtoggle').addEventListener('click', function(){
   var open = nav.classList.toggle('open');
   this.setAttribute('aria-expanded', open ? 'true' : 'false');
 });
+
+// Chaos → system reveal: floating chips get their drift animation and
+// the system core "blooms" in once the section enters the viewport.
+// Fires once (sv2Reveal handles IntersectionObserver + scroll/resize
+// fallback + reduced-motion); see /assets/sv2-reveal.js.
+(function(){
+  var section = document.getElementById('sv2h-problem');
+  if (!section || !window.sv2Reveal) return;
+  var chips = section.querySelectorAll('.problem-diagram__chip');
+  var core = section.querySelector('.problem-diagram__core');
+  window.sv2Reveal(section, function(instant){
+    if (instant) { core.classList.add('sv2h-bloom'); return; }
+    chips.forEach(function(c){ c.classList.add('sv2h-float'); });
+    setTimeout(function(){ core.classList.add('sv2h-bloom'); }, 350);
+  });
+})();
+
+// System diamond (five-layer architecture): scatter → organize, then a
+// brief arrival glow once every point has landed. Own instance/id, same
+// robust trigger as /start/.
+(function(){
+  var diamond = document.getElementById('sv2-diamond-home');
+  if (!diamond || !window.sv2Reveal) return;
+  window.sv2Reveal(diamond, function(instant){
+    diamond.classList.add('is-active');
+    if (instant) { diamond.classList.add('is-complete'); return; }
+    setTimeout(function(){ diamond.classList.add('is-complete'); }, 950);
+  });
+})();
 </script>
 <script src="/assets/booking-modal.js?v=2" defer></script>
 <script src="/assets/qualifier-modal.js?v=1" defer></script>
