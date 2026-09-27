@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/style.css?v=8">
+<link rel="stylesheet" href="/assets/style.css?v=9">
 </head>
 <body>
 
@@ -124,34 +124,37 @@
   </div>
 </section>
 
-<!-- OPERATING SYSTEM -->
+<!-- OPERATING SYSTEM — signature visual -->
 <section class="sv2-section" id="system">
   <div class="sv2-wrap">
     <span class="sv2-eyebrow" style="justify-content:center;display:inline-flex;width:100%">Das Betriebssystem dahinter</span>
-    <h2 class="sv2-h2" style="text-align:center;max-width:30ch;margin-inline:auto 2.2rem">Vier Bereiche. <em>Ein steuerbares Unternehmen.</em></h2>
-    <div class="sv2-module-grid">
-      <div class="sv2-module">
-        <div class="sv2-module__top"><span class="sv2-module__icon">✓</span><span class="sv2-module__num">Client</span></div>
-        <h4>Kund:innen &amp; Begleitung</h4>
+    <h2 class="sv2-h2" style="text-align:center;max-width:30ch;margin-inline:auto 2.6rem">Vier Bereiche. <em>Ein steuerbares Unternehmen.</em></h2>
+    <div class="sv2-orgchart" id="sv2-orgchart-pro">
+      <svg class="sv2-orgchart__lines" viewBox="0 0 900 460" preserveAspectRatio="none" aria-hidden="true">
+        <line class="sv2-orgchart__line" x1="450" y1="230" x2="180" y2="90"></line>
+        <line class="sv2-orgchart__line" x1="450" y1="230" x2="720" y2="90"></line>
+        <line class="sv2-orgchart__line" x1="450" y1="230" x2="180" y2="370"></line>
+        <line class="sv2-orgchart__line" x1="450" y1="230" x2="720" y2="370"></line>
+      </svg>
+      <div class="sv2-orgchart__core"><strong>Co;Gether PRO</strong><span>Steuerbares Betriebssystem</span></div>
+      <div class="sv2-orgchart__node sv2-orgchart__node--client" style="--sx:-40px;--sy:-30px">
+        <span class="sv2-orgchart__node-label">Client</span>
         <p>Kund:innen, Begleitung, Termine, Materialien und Prozesse.</p>
       </div>
-      <div class="sv2-module">
-        <div class="sv2-module__top"><span class="sv2-module__icon">✓</span><span class="sv2-module__num">Sales</span></div>
-        <h4>Vertrieb &amp; Pipeline</h4>
+      <div class="sv2-orgchart__node sv2-orgchart__node--sales" style="--sx:40px;--sy:-30px">
+        <span class="sv2-orgchart__node-label">Sales</span>
         <p>Leads, Gespräche, Pipeline und strukturierter Vertriebsprozess.</p>
       </div>
-      <div class="sv2-module">
-        <div class="sv2-module__top"><span class="sv2-module__icon">✓</span><span class="sv2-module__num">Learning</span></div>
-        <h4>Ausbildung &amp; Training</h4>
+      <div class="sv2-orgchart__node sv2-orgchart__node--learning" style="--sx:-40px;--sy:30px">
+        <span class="sv2-orgchart__node-label">Learning</span>
         <p>Ausbildung, Trainingsstrukturen und Lernprozesse.</p>
       </div>
-      <div class="sv2-module">
-        <div class="sv2-module__top"><span class="sv2-module__icon">✓</span><span class="sv2-module__num">Operations</span></div>
-        <h4>Verbindende Struktur</h4>
-        <p>Die Struktur, die dafür sorgt, dass nicht jeder Bereich für sich arbeitet.</p>
+      <div class="sv2-orgchart__node sv2-orgchart__node--operations" style="--sx:40px;--sy:30px">
+        <span class="sv2-orgchart__node-label">Operations</span>
+        <p>Die verbindende Struktur, die dafür sorgt, dass die Bereiche nicht isoliert arbeiten.</p>
       </div>
     </div>
-    <p class="sv2-lead" style="text-align:center;margin:2rem auto 0;max-width:46rem">PRO verbindet nicht einfach Module. PRO macht Zusammenhänge sichtbar. Denn Skalierung beginnt dort, wo ein Unternehmen nicht mehr davon abhängt, dass eine einzelne Person alles gleichzeitig weiß.</p>
+    <p class="sv2-lead" style="text-align:center;margin:2.6rem auto 0;max-width:46rem">PRO verbindet nicht einfach Module. PRO macht Zusammenhänge sichtbar. Denn Skalierung beginnt dort, wo ein Unternehmen nicht mehr davon abhängt, dass eine einzelne Person alles gleichzeitig weiß.</p>
   </div>
 </section>
 
@@ -301,6 +304,19 @@ document.getElementById('navtoggle').addEventListener('click', function(){
     diamond.classList.add('is-active');
     if (instant) { diamond.classList.add('is-complete'); return; }
     setTimeout(function(){ diamond.classList.add('is-complete'); }, 950);
+  });
+})();
+// Signature visual: CLIENT/SALES/LEARNING/OPERATIONS org-chart. Core
+// fades in, four domains activate staggered, connector lines settle,
+// then a single arrival pulse. Same robust reveal trigger as the
+// diamond animations; fires once, reduced-motion renders final state.
+(function(){
+  var chart = document.getElementById('sv2-orgchart-pro');
+  if (!chart || !window.sv2Reveal) return;
+  window.sv2Reveal(chart, function(instant){
+    chart.classList.add('is-active');
+    if (instant) { chart.classList.add('is-complete'); return; }
+    setTimeout(function(){ chart.classList.add('is-complete'); }, 1400);
   });
 })();
 </script>

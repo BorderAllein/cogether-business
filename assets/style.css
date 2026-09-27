@@ -838,3 +838,49 @@ section.dark .tier-meta b{color:#fff}
 .sv2h-hero-checks li{display:flex;align-items:center;gap:.5rem;color:#e0e9e9;font-size:.76rem;font-weight:600}
 .sv2h-hero-checks li:before{content:"";width:20px;height:20px;border-radius:50%;border:1px solid rgba(37,182,198,.5);background:rgba(37,182,198,.08);flex:0 0 auto}
 .sv2h-hero-qualifier{color:#b8d8db!important;text-decoration:underline!important;font-size:.82rem}
+
+/* ======================================================================
+   SV2 ORGCHART — PRO-only signature visual ("Vier Bereiche. Ein
+   steuerbares Unternehmen."). Hub-and-spoke operating-system composition:
+   central core + four domain panels + connector lines, animated once on
+   viewport entry via the shared sv2Reveal trigger. Desktop: absolute
+   hub layout. Mobile: vertical connected sequence (core → 4 domains).
+   ====================================================================== */
+.sv2-orgchart{position:relative;max-width:900px;margin:0 auto;min-height:460px}
+.sv2-orgchart__lines{position:absolute;inset:0;width:100%;height:100%;overflow:visible;z-index:1}
+.sv2-orgchart__line{stroke:var(--sv2-cyan);stroke-width:1.5;opacity:0;transition:opacity .6s ease-out}
+.sv2-orgchart.is-active .sv2-orgchart__line{opacity:.4;transition-delay:.75s}
+.sv2-orgchart__core{position:absolute;left:50%;top:50%;width:168px;height:168px;margin:-84px 0 0 -84px;z-index:3;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--sv2-cyan-bright),var(--sv2-cyan));display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#04222a;font-family:Arial,Helvetica,sans-serif;font-weight:800;padding:1rem;opacity:0;transform:scale(.7);transition:opacity .8s ease-out,transform .8s cubic-bezier(.16,.84,.44,1)}
+.sv2-orgchart__core strong{font-size:1.05rem;display:block;margin-bottom:.25rem}
+.sv2-orgchart__core span{font-size:.66rem;font-weight:700;opacity:.85;letter-spacing:.02em}
+.sv2-orgchart.is-active .sv2-orgchart__core{opacity:1;transform:scale(1)}
+.sv2-orgchart__node{position:absolute;z-index:2;width:230px;background:#fff;border:1px solid var(--sv2-border);border-radius:14px;padding:1.2rem 1.3rem;box-shadow:0 10px 26px rgba(27,83,93,.08);opacity:0;transform:translate(var(--sx,0),var(--sy,0)) scale(.8);transition:opacity .8s cubic-bezier(.16,.84,.44,1),transform .8s cubic-bezier(.16,.84,.44,1),box-shadow .5s ease-out}
+.sv2-orgchart.is-active .sv2-orgchart__node{opacity:1;transform:translate(0,0) scale(1)}
+.sv2-orgchart.is-active .sv2-orgchart__node:nth-of-type(2){transition-delay:.15s}
+.sv2-orgchart.is-active .sv2-orgchart__node:nth-of-type(3){transition-delay:.30s}
+.sv2-orgchart.is-active .sv2-orgchart__node:nth-of-type(4){transition-delay:.45s}
+.sv2-orgchart.is-active .sv2-orgchart__node:nth-of-type(5){transition-delay:.60s}
+.sv2-orgchart.is-complete .sv2-orgchart__node{box-shadow:0 0 0 1px rgba(83,210,223,.4),0 14px 30px rgba(27,83,93,.12)}
+.sv2-orgchart.is-complete .sv2-orgchart__core{animation:sv2DiamondPulse .7s ease-out}
+.sv2-orgchart__node-label{display:inline-block;color:var(--sv2-cyan);font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.45rem}
+.sv2-orgchart__node p{margin:0;color:var(--sv2-muted);font-size:.85rem;line-height:1.5}
+.sv2-orgchart__node--client{top:2%;left:0}
+.sv2-orgchart__node--sales{top:2%;right:0}
+.sv2-orgchart__node--learning{bottom:2%;left:0}
+.sv2-orgchart__node--operations{bottom:2%;right:0}
+@media(prefers-reduced-motion:reduce){
+  .sv2-orgchart__line,.sv2-orgchart__core,.sv2-orgchart__node{transition:none;opacity:1!important;transform:translate(0,0) scale(1)!important}
+  .sv2-orgchart.is-complete .sv2-orgchart__core{animation:none}
+}
+@media(max-width:900px){
+  .sv2-orgchart{max-width:520px}
+  .sv2-orgchart__node{width:200px}
+}
+@media(max-width:760px){
+  .sv2-orgchart{min-height:0;max-width:420px}
+  .sv2-orgchart__lines{display:none}
+  .sv2-orgchart__core{position:relative;left:auto;top:auto;margin:0 auto 1.4rem;width:140px;height:140px}
+  .sv2-orgchart__node{position:relative;left:auto;right:auto;top:auto;bottom:auto;width:100%;margin:0 0 1rem;transform:translateY(24px) scale(.92)}
+  .sv2-orgchart.is-active .sv2-orgchart__node{transform:translateY(0) scale(1)}
+  .sv2-orgchart__node:last-child{margin-bottom:0}
+}
