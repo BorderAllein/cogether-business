@@ -41,4 +41,6 @@
     e.preventDefault();
     open();
   });
+
+  window.openBookingModal = open;
 })();
