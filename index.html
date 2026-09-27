@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/style.css?v=4">
+<link rel="stylesheet" href="/assets/style.css?v=5">
 </head>
 <body class="home">
 
@@ -103,7 +103,7 @@
     <span class="kicker">Was Co;Gether eigentlich tut</span>
     <h2 style="max-width:34ch;margin-inline:auto">Ein System. Fünf verbundene Ebenen.</h2>
     <p class="section-lede" style="margin-inline:auto">Coachies &amp; Verlauf, Mitgliederbereich, Learning &amp; Programme, Termine, Impulse &amp; Aufgaben, Business-Struktur – sechs Arbeitsbereiche, gemeinsam getragen von derselben Architektur, statt isoliert nebeneinander zu stehen.</p>
-    <div class="layers" style="margin-top:2.5rem">
+    <div class="layers layers--xl" style="margin-top:3rem">
       <div class="layers__stack">
         <div class="layer">Menschen &amp; Rollen <span>Fundament</span></div>
         <div class="layer">Coaching &amp; Learning <span>Inhalt</span></div>
@@ -113,7 +113,6 @@
       </div>
     </div>
   </div>
-  <div class="wave"><svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,0 C300,60 900,60 1200,0 L1200,60 L0,60 Z" fill="#0b1723"></path></svg></div>
 </section>
 
 <!-- 5 USE CASES -->
@@ -122,32 +121,26 @@
     <span class="kicker">Für wen Co;Gether gebaut ist</span>
     <h2 style="max-width:32ch;margin-inline:auto">Nicht nur für Coaches.</h2>
     <p class="section-lede" style="margin-inline:auto">Co;Gether trägt denselben Prozess für jede Form professioneller Begleitung – gleiche Infrastruktur, andere Begleitungsform.</p>
-    <div class="audience-row">
-      <span class="audience-tag">Coaching</span>
-      <span class="audience-tag">Mentoring</span>
-      <span class="audience-tag">Beratung</span>
-      <span class="audience-tag">Ausbildung</span>
-      <span class="audience-tag">Training</span>
+    <div class="usecase-grid">
+      <div class="usecase-tile"><div class="usecase-tile__icon">◑</div><h4>Coaching</h4><p>1:1- und Gruppen-Coaching mit vollem Verlauf.</p></div>
+      <div class="usecase-tile"><div class="usecase-tile__icon">◐</div><h4>Mentoring</h4><p>Längerfristige Begleitung mit klarem roten Faden.</p></div>
+      <div class="usecase-tile"><div class="usecase-tile__icon">◒</div><h4>Beratung</h4><p>Projektbasierte Zusammenarbeit, sauber dokumentiert.</p></div>
+      <div class="usecase-tile"><div class="usecase-tile__icon">◓</div><h4>Ausbildung</h4><p>Programme &amp; Learning Units für Teilnehmende.</p></div>
+      <div class="usecase-tile"><div class="usecase-tile__icon">◍</div><h4>Training</h4><p>Wiederkehrende Formate, strukturiert skalierbar.</p></div>
     </div>
   </div>
-  <div class="wave"><svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,0 C300,60 900,60 1200,0 L1200,60 L0,60 Z" fill="#ffffff"></path></svg></div>
 </section>
 
 <!-- 6 START/GROW/PRO/UNIVERSE NARRATIVE ROWS -->
-<section>
+<section class="tier-stage">
   <div class="wrap">
     <span class="kicker" style="text-align:center;display:block">Vier Stufen, eine Infrastruktur</span>
-    <h2 style="text-align:center;max-width:32ch;margin-inline:auto">Welche Tiefe passt zu Deinem Business?</h2>
-  </div>
-</section>
-
-<section style="padding-top:0">
-  <div class="wrap">
-    <div class="showcase">
+    <h2 style="text-align:center;max-width:32ch;margin-inline:auto 3rem">Welche Tiefe passt zu Deinem Business?</h2>
+    <div class="showcase tier-showcase">
       <div class="showcase__text">
         <span class="tag">01 · Start</span>
         <h3>Professionell digital starten</h3>
-        <p>Für Solo-Praxen und kleinere Business-Anfänge, die aus einzelnen Tools endlich einen sauberen Kunden- und Arbeitsprozess machen wollen.</p>
+        <div class="tier-meta"><span><b>Zielgruppe:</b> Solo-Praxen &amp; kleinere Business-Anfänge</span><span><b>Löst:</b> verstreute Tools, kein sauberer Kundenprozess</span></div>
         <ul class="tier-row__caps">
           <li>Zentrale Kundenarbeit</li>
           <li>Professioneller Mitgliederbereich</li>
@@ -156,7 +149,7 @@
         <a class="btn btn-ghost" href="/start/">START im Detail →</a>
       </div>
       <div class="showcase__visual">
-        <div class="mockup mockup--client">
+        <div class="mockup mockup--client mockup--xl">
           <span class="mockup__label">Mitgliederbereich · Vorschau</span>
           <div class="row"><strong>Hallo Lisa</strong><span>Nächstes Coaching: Do. 18:00</span></div>
           <div class="row"><span>Learning Unit</span><span>Grenzen erkennen &amp; benennen</span></div>
@@ -165,14 +158,13 @@
       </div>
     </div>
   </div>
-  <div class="wave"><svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,0 C300,60 900,60 1200,0 L1200,60 L0,60 Z" fill="#0b1723"></path></svg></div>
 </section>
 
-<section class="dark">
+<section class="dark tier-stage">
   <div class="wrap">
-    <div class="showcase reverse">
+    <div class="showcase reverse tier-showcase">
       <div class="showcase__visual">
-        <div class="mockup mockup--pipeline">
+        <div class="mockup mockup--pipeline mockup--xl">
           <div class="step">Erstgespräch</div>
           <span class="arrow">→</span>
           <div class="step">Programm-Start</div>
@@ -183,7 +175,7 @@
       <div class="showcase__text">
         <span class="tag">02 · Grow</span>
         <h3>Wachstum systematisieren</h3>
-        <p>Für Businesses mit mehr Kund:innen, wiederkehrenden Abläufen, ersten Gruppen oder Programmen und spürbar mehr operativer Komplexität.</p>
+        <div class="tier-meta"><span><b>Zielgruppe:</b> wachsende Businesses mit mehr Kund:innen</span><span><b>Löst:</b> mehr Aufwand statt mehr Struktur beim Wachsen</span></div>
         <ul class="tier-row__caps">
           <li>Wiederkehrende Programme &amp; Abläufe</li>
           <li>Weniger manuelle Übergaben</li>
@@ -193,16 +185,15 @@
       </div>
     </div>
   </div>
-  <div class="wave"><svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,0 C300,60 900,60 1200,0 L1200,60 L0,60 Z" fill="#ffffff"></path></svg></div>
 </section>
 
-<section>
+<section class="tier-stage">
   <div class="wrap">
-    <div class="showcase">
+    <div class="showcase tier-showcase">
       <div class="showcase__text">
         <span class="tag">03 · Pro</span>
         <h3>Komplexität professionell steuern</h3>
-        <p>Für etablierte Unternehmen, in denen mehrere operative Bereiche, Angebote und Prozesse sauber zusammenspielen müssen.</p>
+        <div class="tier-meta"><span><b>Zielgruppe:</b> etablierte Unternehmen mit mehreren Bereichen</span><span><b>Löst:</b> Prozesse &amp; Wissen hängen an Einzelpersonen</span></div>
         <ul class="tier-row__caps">
           <li>Mehrere operative Bereiche zusammenführen</li>
           <li>Höhere Prozess- &amp; Angebotskomplexität</li>
@@ -211,7 +202,7 @@
         <a class="btn btn-ghost" href="/pro/">PRO im Detail →</a>
       </div>
       <div class="showcase__visual">
-        <div class="mockup mockup--stats">
+        <div class="mockup mockup--stats mockup--xl">
           <div class="stat"><b>14</b><span>Aktive Coachies</span></div>
           <div class="stat"><b>3</b><span>Programme</span></div>
           <div class="stat"><b>2</b><span>Offene Fragen</span></div>
@@ -220,14 +211,13 @@
       </div>
     </div>
   </div>
-  <div class="wave"><svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,0 C300,60 900,60 1200,0 L1200,60 L0,60 Z" fill="#0b1723"></path></svg></div>
 </section>
 
-<section class="dark">
+<section class="dark tier-stage">
   <div class="wrap">
-    <div class="showcase reverse">
+    <div class="showcase reverse tier-showcase">
       <div class="showcase__visual">
-        <div class="mockup mockup--network">
+        <div class="mockup mockup--network mockup--xl">
           <svg viewBox="0 0 300 120" preserveAspectRatio="none">
             <line x1="40" y1="60" x2="150" y2="20"></line>
             <line x1="40" y1="60" x2="150" y2="100"></line>
@@ -244,7 +234,7 @@
       <div class="showcase__text">
         <span class="tag">04 · Universe</span>
         <h3>Individuelle Business-Infrastruktur</h3>
-        <p>Für Unternehmen, deren Anforderungen bewusst über ein Standardpaket hinausgehen – von der ambitionierten Einzelperson bis zur größeren Organisation.</p>
+        <div class="tier-meta"><span><b>Zielgruppe:</b> Organisationen mit besonderem Bedarf</span><span><b>Löst:</b> Standardpakete reichen nicht mehr aus</span></div>
         <ul class="tier-row__caps">
           <li>Setup außerhalb der Standardlogik</li>
           <li>Anpassung an besondere Prozesse</li>
@@ -341,7 +331,6 @@
       <div class="pipeline__step"><div class="pipeline__num">4</div><h4>Go-Live</h4><p>Gemeinsam sauber starten, statt Dich mit einem Login allein zu lassen.</p></div>
     </div>
   </div>
-  <div class="wave"><svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,0 C300,60 900,60 1200,0 L1200,60 L0,60 Z" fill="#ffffff"></path></svg></div>
 </section>
 
 <!-- 9 PRODUCT PROOF -->
@@ -350,7 +339,7 @@
     <span class="kicker">Product Proof</span>
     <h2 style="max-width:32ch;margin-inline:auto">So fühlt sich Dein neues System an.</h2>
     <p class="section-lede" style="margin-inline:auto;margin-bottom:2.2rem">Ein kurzer Einblick in die echte Oberfläche – kein Mockup, keine Animation, sondern das System, das Du ab Tag eins nutzt.</p>
-    <div class="video-showcase">
+    <div class="video-showcase video-showcase--xl">
       <span class="video-showcase__badge">Live-Einblick</span>
       <video controls preload="metadata" poster="/assets/img/sven-portrait.jpg">
         <source src="https://cogether.de/wp-content/uploads/2026/09/CoGether_Mein-CoGether_Praesentation.mp4" type="video/mp4">
@@ -366,7 +355,7 @@
         <a class="btn btn-ghost" href="/start/">Mehr erfahren →</a>
       </div>
       <div class="showcase__visual">
-        <div class="mockup mockup--client">
+        <div class="mockup mockup--client mockup--xl">
           <span class="mockup__label">Mitgliederbereich · Vorschau</span>
           <div class="row"><strong>Hallo Lisa</strong><span>Nächstes Coaching: Do. 18:00</span></div>
           <div class="row"><span>Learning Unit</span><span>Grenzen erkennen &amp; benennen</span></div>
@@ -377,7 +366,7 @@
 
     <div class="showcase reverse">
       <div class="showcase__visual">
-        <div class="mockup mockup--pipeline">
+        <div class="mockup mockup--pipeline mockup--xl">
           <div class="step">Erstgespräch</div>
           <span class="arrow">→</span>
           <div class="step">Begleitung</div>
@@ -400,7 +389,7 @@
 <section class="dark">
   <div class="wrap">
     <span class="kicker" style="text-align:center;display:block">Aus echter Coachingarbeit entstanden</span>
-    <div class="founder">
+    <div class="founder founder--xl">
       <div class="founder__photo"><img src="/assets/img/sven-portrait.jpg" alt="Sven, Gründer von Co;Gether" loading="lazy"></div>
       <div>
         <blockquote>„Wir haben Co;Gether nicht gebaut, weil uns eine Softwareidee fehlte. Wir haben es gebaut, weil wir dieselbe Fragmentierung in unserer eigenen Coachingarbeit erlebt haben – und weil wir einen Ort wollten, an dem Begleitung, Kundenerlebnis und tägliche Arbeit wirklich zusammenkommen.“</blockquote>
@@ -453,7 +442,6 @@
       </div>
     </div>
   </div>
-  <div class="wave"><svg viewBox="0 0 1200 60" preserveAspectRatio="none"><path d="M0,0 C300,60 900,60 1200,0 L1200,60 L0,60 Z" fill="#ffffff"></path></svg></div>
 </section>
 
 <!-- 11 FAQ -->
