@@ -884,3 +884,37 @@ section.dark .tier-meta b{color:#fff}
   .sv2-orgchart.is-active .sv2-orgchart__node{transform:translateY(0) scale(1)}
   .sv2-orgchart__node:last-child{margin-bottom:0}
 }
+
+/* ======================================================================
+   SV2 EVIDENCE — "Co;Gether in der Praxis" case-summary system. Used on
+   Home (all four), PRO (Kerstin only) and GROW (Michelle only). No
+   testimonial here is a verbatim customer quote yet — everything is
+   rendered as an editorial case summary (no quotation marks, no
+   "X sagt:") until each case carries testimonial-status="approved" in
+   its own HTML comment. Asymmetric grid: one featured case + three
+   supporting, not a row of identical review cards.
+   ====================================================================== */
+.sv2-evidence{padding:3.4rem 0}
+.sv2-evidence__grid{display:grid;grid-template-columns:1.3fr 1fr;gap:1.4rem;align-items:stretch}
+.sv2-evidence__supporting{display:grid;gap:1.4rem}
+.sv2-evidence__case{background:#fff;border:1px solid var(--sv2-border,#e5f0f1);border-radius:16px;padding:1.8rem 1.9rem;display:flex;flex-direction:column;gap:.9rem}
+.sv2-evidence__case--featured{padding:2.4rem 2.6rem;justify-content:center}
+.sv2-evidence__label{display:inline-flex;align-self:flex-start;align-items:center;gap:.5rem;color:var(--sv2-cyan,#078b9c);font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.sv2-evidence__label:before{content:"";width:16px;height:1px;background:var(--sv2-cyan,#078b9c)}
+.sv2-evidence__name{margin:0;font-family:Arial,Helvetica,sans-serif;font-weight:800;color:var(--sv2-ink,#122a3b)}
+.sv2-evidence__case--featured .sv2-evidence__name{font-size:1.4rem}
+.sv2-evidence__case:not(.sv2-evidence__case--featured) .sv2-evidence__name{font-size:1.05rem}
+.sv2-evidence__role{margin:-.6rem 0 0;color:var(--sv2-muted,#65777a);font-size:.8rem}
+.sv2-evidence__row{display:grid;grid-template-columns:6.5rem 1fr;gap:.6rem;font-size:.86rem;line-height:1.55}
+.sv2-evidence__row dt{color:var(--sv2-muted,#65777a);font-weight:700;font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;padding-top:.15rem}
+.sv2-evidence__row dd{margin:0;color:var(--sv2-ink,#122a3b)}
+.sv2-evidence__metric{margin-top:.3rem;padding:.9rem 1.1rem;background:var(--sv2-cyan-tint,#e1f6f7);border-radius:10px;font-size:.86rem;color:var(--sv2-ink,#122a3b);font-weight:600;line-height:1.5}
+@media(max-width:960px){
+  .sv2-evidence__grid{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .sv2-evidence__case,.sv2-evidence__case--featured{padding:1.5rem 1.4rem}
+  .sv2-evidence__row{grid-template-columns:1fr}
+  .sv2-evidence__row dt{padding-top:0}
+}
+}
