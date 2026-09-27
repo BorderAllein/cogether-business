@@ -886,35 +886,59 @@ section.dark .tier-meta b{color:#fff}
 }
 
 /* ======================================================================
-   SV2 EVIDENCE — "Co;Gether in der Praxis" case-summary system. Used on
-   Home (all four), PRO (Kerstin only) and GROW (Michelle only). No
-   testimonial here is a verbatim customer quote yet — everything is
-   rendered as an editorial case summary (no quotation marks, no
-   "X sagt:") until each case carries testimonial-status="approved" in
-   its own HTML comment. Asymmetric grid: one featured case + three
-   supporting, not a row of identical review cards.
+   SV2 TESTIMONIALS — "Co;Gether in der Praxis" premium testimonial
+   composition. Replaces the earlier internal-looking evidence-matrix
+   layout. Asymmetric editorial grid (Kerstin featured full-width, then
+   Michelle/Steffi side by side, then Carmen wide closing). No fake
+   photos, no fabricated star ratings — only Kerstin has a confirmed
+   5-star rating; everyone else uses a neutral "Aus der Praxis" marker.
+   Reveals once via the shared sv2Reveal trigger; calm stagger, no loop.
    ====================================================================== */
-.sv2-evidence{padding:3.4rem 0}
-.sv2-evidence__grid{display:grid;grid-template-columns:1.3fr 1fr;gap:1.4rem;align-items:stretch}
-.sv2-evidence__supporting{display:grid;gap:1.4rem}
-.sv2-evidence__case{background:#fff;border:1px solid var(--sv2-border,#e5f0f1);border-radius:16px;padding:1.8rem 1.9rem;display:flex;flex-direction:column;gap:.9rem}
-.sv2-evidence__case--featured{padding:2.4rem 2.6rem;justify-content:center}
-.sv2-evidence__label{display:inline-flex;align-self:flex-start;align-items:center;gap:.5rem;color:var(--sv2-cyan,#078b9c);font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
-.sv2-evidence__label:before{content:"";width:16px;height:1px;background:var(--sv2-cyan,#078b9c)}
-.sv2-evidence__name{margin:0;font-family:Arial,Helvetica,sans-serif;font-weight:800;color:var(--sv2-ink,#122a3b)}
-.sv2-evidence__case--featured .sv2-evidence__name{font-size:1.4rem}
-.sv2-evidence__case:not(.sv2-evidence__case--featured) .sv2-evidence__name{font-size:1.05rem}
-.sv2-evidence__role{margin:-.6rem 0 0;color:var(--sv2-muted,#65777a);font-size:.8rem}
-.sv2-evidence__row{display:grid;grid-template-columns:6.5rem 1fr;gap:.6rem;font-size:.86rem;line-height:1.55}
-.sv2-evidence__row dt{color:var(--sv2-muted,#65777a);font-weight:700;font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;padding-top:.15rem}
-.sv2-evidence__row dd{margin:0;color:var(--sv2-ink,#122a3b)}
-.sv2-evidence__metric{margin-top:.3rem;padding:.9rem 1.1rem;background:var(--sv2-cyan-tint,#e1f6f7);border-radius:10px;font-size:.86rem;color:var(--sv2-ink,#122a3b);font-weight:600;line-height:1.5}
+.sv2-testimonials{padding:3.6rem 0}
+.sv2-testimonials__grid{display:grid;grid-template-columns:1fr 1fr;grid-template-areas:"kerstin kerstin" "michelle steffi" "carmen carmen";gap:1.2rem}
+.sv2-testimonial{position:relative;background:#fff;border-radius:18px;padding:2.2rem 2.3rem;box-shadow:0 14px 34px rgba(18,42,59,.06);opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.16,.84,.44,1),transform .7s cubic-bezier(.16,.84,.44,1)}
+.sv2-testimonials.is-active .sv2-testimonial{opacity:1;transform:translateY(0)}
+.sv2-testimonials.is-active .sv2-testimonial--kerstin{transition-delay:0ms}
+.sv2-testimonials.is-active .sv2-testimonial--michelle{transition-delay:150ms}
+.sv2-testimonials.is-active .sv2-testimonial--steffi{transition-delay:230ms}
+.sv2-testimonials.is-active .sv2-testimonial--carmen{transition-delay:340ms}
+.sv2-testimonial--kerstin{grid-area:kerstin;display:grid;grid-template-columns:auto 1fr;gap:2rem;align-items:center;padding:2.8rem 3rem;background:linear-gradient(155deg,var(--sv2-navy) 0%,var(--sv2-navy-soft) 100%);color:#fff;box-shadow:0 26px 55px -18px rgba(12,34,49,.4)}
+.sv2-testimonial--michelle{grid-area:michelle}
+.sv2-testimonial--steffi{grid-area:steffi}
+.sv2-testimonial--carmen{grid-area:carmen;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;background:var(--sv2-bg-soft,#f6fbfb)}
+.sv2-testimonial__mark{position:absolute;top:1.1rem;left:1.4rem;font-family:Georgia,'Times New Roman',serif;font-size:4.5rem;line-height:1;color:var(--sv2-cyan-tint,#e1f6f7);z-index:0;user-select:none}
+.sv2-testimonial--kerstin .sv2-testimonial__mark{color:rgba(83,210,223,.18)}
+.sv2-testimonial__head{position:relative;z-index:1;display:flex;align-items:center;gap:.9rem;margin-bottom:1rem}
+.sv2-testimonial__initials{flex:0 0 auto;width:52px;height:52px;border-radius:50%;background:var(--sv2-cyan-tint,#e1f6f7);color:var(--sv2-cyan,#078b9c);display:flex;align-items:center;justify-content:center;font-family:Arial,Helvetica,sans-serif;font-weight:800;font-size:1.1rem}
+.sv2-testimonial--kerstin .sv2-testimonial__initials{background:rgba(255,255,255,.12);color:#fff}
+.sv2-testimonial__id strong{display:block;font-family:Arial,Helvetica,sans-serif;font-weight:800;font-size:1.15rem;color:var(--sv2-ink,#122a3b)}
+.sv2-testimonial--kerstin .sv2-testimonial__id strong{color:#fff;font-size:1.3rem}
+.sv2-testimonial__id span{display:block;color:var(--sv2-muted,#65777a);font-size:.78rem}
+.sv2-testimonial--kerstin .sv2-testimonial__id span{color:#b2d0d5}
+.sv2-testimonial__stars{color:#f4b942;font-size:.9rem;letter-spacing:.1em;margin-bottom:.15rem}
+.sv2-testimonial__stars-label{display:block;color:var(--sv2-muted,#65777a);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase}
+.sv2-testimonial--kerstin .sv2-testimonial__stars-label{color:#b2d0d5}
+.sv2-testimonial__marker{display:inline-flex;align-items:center;gap:.4rem;color:var(--sv2-cyan,#078b9c);font-size:.66rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.15rem}
+.sv2-testimonial__marker:before{content:"";width:6px;height:6px;border-radius:50%;background:var(--sv2-cyan,#078b9c)}
+.sv2-testimonial__text{position:relative;z-index:1;margin:0 0 1rem;color:var(--sv2-ink,#122a3b);font-size:1rem;line-height:1.65}
+.sv2-testimonial--kerstin .sv2-testimonial__text{color:#e3edee;font-size:1.08rem}
+.sv2-testimonial__text strong{font-weight:700}
+.sv2-testimonial__highlight{position:relative;z-index:1;color:var(--sv2-cyan,#078b9c);font-weight:700;font-size:.92rem;line-height:1.5;margin:0 0 1rem}
+.sv2-testimonial--kerstin .sv2-testimonial__highlight{color:var(--sv2-cyan-bright,#53d2df)}
+.sv2-testimonial__metric{position:relative;z-index:1;display:inline-flex;flex-direction:column;gap:.15rem;background:rgba(83,210,223,.14);border-radius:12px;padding:1rem 1.3rem}
+.sv2-testimonial__metric b{font-family:Arial,Helvetica,sans-serif;font-size:1.05rem;color:#fff}
+.sv2-testimonial__metric small{color:#b2d0d5;font-size:.68rem;line-height:1.5;max-width:34ch}
+.sv2-testimonial__category{grid-column:1/-1;order:-1}
 @media(max-width:960px){
-  .sv2-evidence__grid{grid-template-columns:1fr}
+  .sv2-testimonials__grid{grid-template-columns:1fr;grid-template-areas:"kerstin" "michelle" "steffi" "carmen"}
+  .sv2-testimonial--kerstin,.sv2-testimonial--carmen{grid-template-columns:1fr;text-align:left}
+  .sv2-testimonial--kerstin > div:first-child,.sv2-testimonial--carmen > div:first-child{order:0}
 }
 @media(max-width:560px){
-  .sv2-evidence__case,.sv2-evidence__case--featured{padding:1.5rem 1.4rem}
-  .sv2-evidence__row{grid-template-columns:1fr}
-  .sv2-evidence__row dt{padding-top:0}
+  .sv2-testimonial{padding:1.7rem 1.6rem}
+  .sv2-testimonial--kerstin{padding:2rem 1.7rem}
+  .sv2-testimonial__mark{font-size:3.4rem}
 }
+@media(prefers-reduced-motion:reduce){
+  .sv2-testimonial{transition:none;opacity:1;transform:none}
 }
