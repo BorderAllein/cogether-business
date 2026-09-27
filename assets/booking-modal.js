@@ -1,5 +1,5 @@
 (function(){
-  var BOOKING_URL = 'https://cogether.de/coach-sven/#termin-buchen';
+  var BOOKING_URL = 'https://cogether.de/termin-embed/sven/';
   var modal = null;
 
   function build(){
