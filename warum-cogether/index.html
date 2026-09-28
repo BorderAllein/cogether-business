@@ -91,7 +91,7 @@
     <div class="sv2-intro__visual">
       <div class="sv2-fit" style="padding:2.4rem 2.6rem">
         <span class="sv2-fit__eyebrow">Der Kerngedanke</span>
-        <h2 style="font-size:1.5rem">Menschen begleiten Menschen.</h2>
+        <h3 style="font-size:1.5rem;margin:0 0 .6rem;font-weight:800;color:var(--sv2-ink)">Menschen begleiten Menschen.</h3>
         <p>Und deshalb darf die Organisation drumherum nicht die Energie auffressen, die eigentlich in die Begleitung gehört.</p>
       </div>
     </div>
@@ -342,6 +342,7 @@ document.getElementById('navtoggle').addEventListener('click', function(){
 (function(){
   var scroller = document.getElementById('sv2-storyscroll-warum');
   if (!scroller || !('IntersectionObserver' in window)) return;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   var stages = scroller.querySelectorAll('.sv2-storyscroll__stage');
   var images = scroller.querySelectorAll('.sv2-storyscroll__visual img');
   var io = new IntersectionObserver(function(entries){
