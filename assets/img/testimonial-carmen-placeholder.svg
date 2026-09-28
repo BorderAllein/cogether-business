@@ -1,0 +1,15 @@
+<svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Carmen, dezente Profil-Silhouette">
+  <defs>
+    <linearGradient id="cg-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c2231"/>
+      <stop offset="100%" stop-color="#163641"/>
+    </linearGradient>
+    <linearGradient id="cg-fig" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#53d2df" stop-opacity=".9"/>
+      <stop offset="100%" stop-color="#078b9c" stop-opacity=".55"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="500" fill="url(#cg-bg)"/>
+  <circle cx="200" cy="185" r="80" fill="url(#cg-fig)"/>
+  <path d="M60,470 C60,340 130,270 200,270 C270,270 340,340 340,470 Z" fill="url(#cg-fig)"/>
+</svg>
