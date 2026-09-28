@@ -991,3 +991,31 @@ section.dark .tier-meta b{color:#fff}
 .sv2-founder .team-card__role{color:var(--sv2-cyan-bright,#53d2df)}
 .sv2-founder .team-card__text{color:#c3d4d8}
 .sv2-founder .team-card__photo{border-color:rgba(255,255,255,.14)}
+
+/* ======================================================================
+   SV2 WARUM — /warum-cogether/ only. Guided 3-step story (abstract
+   conceptual panels, not fake screenshots), ecosystem domain map, and
+   value tiles. Reuses sv2-diamond/sv2-transform/sv2-human-panel/
+   sv2-founder for the journey, two-sides and human-principle sections.
+   ====================================================================== */
+.sv2-story3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.sv2-story3__step{background:#fff;border:1px solid var(--sv2-border,#e5f0f1);border-radius:16px;padding:1.8rem;opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.16,.84,.44,1),transform .7s cubic-bezier(.16,.84,.44,1)}
+.sv2-story3.is-active .sv2-story3__step{opacity:1;transform:translateY(0)}
+.sv2-story3.is-active .sv2-story3__step:nth-child(2){transition-delay:180ms}
+.sv2-story3.is-active .sv2-story3__step:nth-child(3){transition-delay:360ms}
+.sv2-story3__num{display:inline-flex;width:34px;height:34px;border-radius:50%;background:var(--sv2-cyan-tint,#e1f6f7);color:var(--sv2-cyan,#078b9c);align-items:center;justify-content:center;font-weight:800;font-family:Arial,Helvetica,sans-serif;margin-bottom:1rem}
+.sv2-story3__visual{aspect-ratio:4/3;border-radius:12px;margin-bottom:1.2rem;background:linear-gradient(155deg,var(--sv2-navy) 0%,var(--sv2-navy-soft) 100%);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.sv2-story3__visual svg{width:70%;height:70%}
+.sv2-story3__step h4{margin:0 0 .5rem;font-family:Arial,Helvetica,sans-serif;font-weight:800;color:var(--sv2-ink,#122a3b);font-size:1.05rem}
+.sv2-story3__step p{margin:0;color:var(--sv2-muted,#65777a);font-size:.88rem;line-height:1.55}
+@media(max-width:860px){.sv2-story3{grid-template-columns:1fr}}
+
+.sv2-ecosystem{display:flex;flex-wrap:wrap;justify-content:center;gap:.7rem;max-width:760px;margin:0 auto}
+.sv2-ecosystem__node{background:#fff;border:1px solid var(--sv2-border,#e5f0f1);border-radius:999px;padding:.6rem 1.2rem;font-size:.85rem;font-weight:700;color:var(--sv2-ink,#122a3b)}
+.sv2-ecosystem__node--core{background:var(--sv2-navy);color:#fff;border-color:var(--sv2-navy);font-weight:800}
+
+.sv2-values{display:grid;grid-template-columns:repeat(4,1fr);gap:.8rem}
+.sv2-values__tile{background:#fff;border:1px solid var(--sv2-border,#e5f0f1);border-radius:14px;padding:1.4rem 1rem;text-align:center}
+.sv2-values__tile strong{display:block;font-family:Arial,Helvetica,sans-serif;font-weight:800;color:var(--sv2-cyan,#078b9c);font-size:.95rem;letter-spacing:.04em;margin-bottom:.4rem}
+.sv2-values__tile span{color:var(--sv2-muted,#65777a);font-size:.8rem;line-height:1.5}
+@media(max-width:760px){.sv2-values{grid-template-columns:repeat(2,1fr)}}
