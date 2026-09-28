@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/style.css?v=15">
+<link rel="stylesheet" href="/assets/style.css?v=16">
 </head>
 <body>
 
@@ -130,53 +130,77 @@
   </div>
 </section>
 
-<!-- GUIDED VISUAL STORY (abstract, no fabricated screenshots) -->
+<!-- GUIDED VISUAL STORY — 3 concept visualizations, clearly labeled -->
 <section class="sv2-section" style="background:var(--sv2-bg-soft)">
   <div class="sv2-wrap">
     <span class="sv2-eyebrow" style="justify-content:center;display:inline-flex;width:100%">Wie sich das konkret zeigt</span>
     <h2 class="sv2-h2" style="text-align:center;max-width:34ch;margin-inline:auto 2.2rem">Von verstreuter Arbeit zu einem gemeinsamen Ökosystem.</h2>
-    <div class="sv2-story3" id="sv2-story3-warum">
-      <div class="sv2-story3__step">
-        <span class="sv2-story3__num">1</span>
-        <div class="sv2-story3__visual">
-          <svg viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="6" y="10" width="24" height="16" rx="3" fill="#53d2df" opacity=".35" transform="rotate(-8 18 18)"/>
-            <rect x="40" y="6" width="24" height="16" rx="3" fill="#53d2df" opacity=".55" transform="rotate(6 52 14)"/>
-            <rect x="70" y="20" width="24" height="16" rx="3" fill="#53d2df" opacity=".35" transform="rotate(-4 82 28)"/>
-            <rect x="18" y="46" width="24" height="16" rx="3" fill="#53d2df" opacity=".55" transform="rotate(5 30 54)"/>
-            <rect x="54" y="48" width="24" height="16" rx="3" fill="#53d2df" opacity=".35" transform="rotate(-7 66 56)"/>
-          </svg>
+
+    <!-- Desktop: sticky crossfade -->
+    <div class="sv2-storyscroll" id="sv2-storyscroll-warum">
+      <div class="sv2-storyscroll__text">
+        <div class="sv2-storyscroll__stage is-current" data-stage="1">
+          <span>01 · Ausgangslage</span>
+          <h3>Professionelle Begleitung existiert – aber Informationen und Entwicklung können fragmentiert sein.</h3>
+          <p>Termine, Notizen, Materialien und Kommunikation liegen leicht verteilt über mehrere Tools. Jedes für sich funktioniert, der Zusammenhang fehlt.</p>
         </div>
-        <h4>Was im Alltag oft fehlt</h4>
-        <p>Termine, Notizen, Materialien und Kommunikation liegen verteilt – jedes für sich sinnvoll, aber ohne Zusammenhang.</p>
+        <div class="sv2-storyscroll__stage" data-stage="2">
+          <span>02 · Zwischen den Terminen</span>
+          <h3>Reflexion, Lernen und Aufgaben laufen weiter – auch außerhalb des Termins.</h3>
+          <p>Entwicklung endet nicht mit dem Gespräch. Reflexionen, Learning Units und nächste Schritte bleiben sichtbar und anschlussfähig, bis zum nächsten Termin.</p>
+        </div>
+        <div class="sv2-storyscroll__stage" data-stage="3">
+          <span>03 · Das gemeinsame Ökosystem</span>
+          <h3>Coach und Coachie arbeiten durch ein verbundenes Entwicklungsumfeld.</h3>
+          <p>Beide Seiten teilen denselben Kontext – ohne dass jede Seite alles von der anderen sehen muss. Ein System, zwei Perspektiven, ein gemeinsamer Entwicklungsprozess.</p>
+        </div>
       </div>
-      <div class="sv2-story3__step">
-        <span class="sv2-story3__num">2</span>
-        <div class="sv2-story3__visual">
-          <svg viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="20" cy="40" r="8" fill="#53d2df"/>
-            <circle cx="50" cy="20" r="8" fill="#53d2df" opacity=".8"/>
-            <circle cx="80" cy="40" r="8" fill="#53d2df" opacity=".6"/>
-            <path d="M20,40 L50,20 L80,40" stroke="#53d2df" stroke-width="2" opacity=".5"/>
-          </svg>
-        </div>
-        <h4>Wie Entwicklung zwischen Terminen sichtbar wird</h4>
-        <p>Reflexion, Learning Unit und nächster Impuls entstehen entlang eines Pfads – die Entwicklung läuft weiter, nicht nur der Termin.</p>
+      <div class="sv2-storyscroll__visual">
+        <span class="sv2-storyscroll__badge">Konzeptdarstellung</span>
+        <img class="is-active" data-stage="1" src="/assets/img/warum-story-1.png" alt="Konzeptvisualisierung: Co;Gether Arbeitsumgebung (KI-generierte Darstellung, keine echten Kundendaten)" loading="lazy">
+        <img data-stage="2" src="/assets/img/warum-story-2.png" alt="Konzeptvisualisierung: Lernen und Entwicklung zwischen Terminen (KI-generierte Darstellung, keine echten Kundendaten)" loading="lazy">
+        <img data-stage="3" src="/assets/img/warum-story-3.png" alt="Konzeptvisualisierung: gemeinsames Ökosystem (KI-generierte Darstellung, keine echten Kundendaten)" loading="lazy">
+        <p class="sv2-storyscroll__disclosure">Visualisierung des Co;Gether-Erlebnisses – keine realen Kundendaten.</p>
       </div>
-      <div class="sv2-story3__step">
-        <span class="sv2-story3__num">3</span>
-        <div class="sv2-story3__visual">
-          <svg viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="40" r="14" fill="#53d2df"/>
-            <circle cx="18" cy="20" r="7" fill="#53d2df" opacity=".6"/>
-            <circle cx="82" cy="20" r="7" fill="#53d2df" opacity=".6"/>
-            <circle cx="18" cy="60" r="7" fill="#53d2df" opacity=".6"/>
-            <circle cx="82" cy="60" r="7" fill="#53d2df" opacity=".6"/>
-            <path d="M50,40 L18,20 M50,40 L82,20 M50,40 L18,60 M50,40 L82,60" stroke="#53d2df" stroke-width="1.5" opacity=".4"/>
-          </svg>
+    </div>
+
+    <!-- Mobile: stacked, no sticky/crossfade -->
+    <div class="sv2-storyscroll--mobile">
+      <div>
+        <div class="sv2-storyscroll__stage">
+          <span>01 · Ausgangslage</span>
+          <h3>Professionelle Begleitung existiert – aber Informationen und Entwicklung können fragmentiert sein.</h3>
+          <p>Termine, Notizen, Materialien und Kommunikation liegen leicht verteilt über mehrere Tools. Jedes für sich funktioniert, der Zusammenhang fehlt.</p>
         </div>
-        <h4>Wie Coach und Coachie im selben Ökosystem arbeiten</h4>
-        <p>Beide Seiten teilen denselben Kontext – ohne dass jede Seite alles vom anderen sehen muss.</p>
+        <div class="sv2-storyscroll__visual">
+          <span class="sv2-storyscroll__badge">Konzeptdarstellung</span>
+          <img src="/assets/img/warum-story-1.png" alt="Konzeptvisualisierung: Co;Gether Arbeitsumgebung (KI-generierte Darstellung, keine echten Kundendaten)" loading="lazy">
+          <p class="sv2-storyscroll__disclosure">Visualisierung des Co;Gether-Erlebnisses – keine realen Kundendaten.</p>
+        </div>
+      </div>
+      <div>
+        <div class="sv2-storyscroll__stage">
+          <span>02 · Zwischen den Terminen</span>
+          <h3>Reflexion, Lernen und Aufgaben laufen weiter – auch außerhalb des Termins.</h3>
+          <p>Entwicklung endet nicht mit dem Gespräch. Reflexionen, Learning Units und nächste Schritte bleiben sichtbar und anschlussfähig, bis zum nächsten Termin.</p>
+        </div>
+        <div class="sv2-storyscroll__visual">
+          <span class="sv2-storyscroll__badge">Konzeptdarstellung</span>
+          <img src="/assets/img/warum-story-2.png" alt="Konzeptvisualisierung: Lernen und Entwicklung zwischen Terminen (KI-generierte Darstellung, keine echten Kundendaten)" loading="lazy">
+          <p class="sv2-storyscroll__disclosure">Visualisierung des Co;Gether-Erlebnisses – keine realen Kundendaten.</p>
+        </div>
+      </div>
+      <div>
+        <div class="sv2-storyscroll__stage">
+          <span>03 · Das gemeinsame Ökosystem</span>
+          <h3>Coach und Coachie arbeiten durch ein verbundenes Entwicklungsumfeld.</h3>
+          <p>Beide Seiten teilen denselben Kontext – ohne dass jede Seite alles von der anderen sehen muss. Ein System, zwei Perspektiven, ein gemeinsamer Entwicklungsprozess.</p>
+        </div>
+        <div class="sv2-storyscroll__visual">
+          <span class="sv2-storyscroll__badge">Konzeptdarstellung</span>
+          <img src="/assets/img/warum-story-3.png" alt="Konzeptvisualisierung: gemeinsames Ökosystem (KI-generierte Darstellung, keine echten Kundendaten)" loading="lazy">
+          <p class="sv2-storyscroll__disclosure">Visualisierung des Co;Gether-Erlebnisses – keine realen Kundendaten.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -310,10 +334,25 @@ document.getElementById('navtoggle').addEventListener('click', function(){
     setTimeout(function(){ diamond.classList.add('is-complete'); }, 1000);
   });
 })();
+// Guided visual story: as each narrative stage crosses the viewport
+// center, the matching concept image crossfades in on the sticky right
+// panel and the stage text gains focus. Plain IntersectionObserver,
+// no library; disabled entirely under prefers-reduced-motion (all
+// content already visible/readable without it).
 (function(){
-  var story = document.getElementById('sv2-story3-warum');
-  if (!story || !window.sv2Reveal) return;
-  window.sv2Reveal(story, function(){ story.classList.add('is-active'); });
+  var scroller = document.getElementById('sv2-storyscroll-warum');
+  if (!scroller || !('IntersectionObserver' in window)) return;
+  var stages = scroller.querySelectorAll('.sv2-storyscroll__stage');
+  var images = scroller.querySelectorAll('.sv2-storyscroll__visual img');
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (!entry.isIntersecting) return;
+      var n = entry.target.getAttribute('data-stage');
+      stages.forEach(function(s){ s.classList.toggle('is-current', s === entry.target); });
+      images.forEach(function(img){ img.classList.toggle('is-active', img.getAttribute('data-stage') === n); });
+    });
+  }, { threshold: 0.5, rootMargin: '-20% 0px -20% 0px' });
+  stages.forEach(function(s){ io.observe(s); });
 })();
 </script>
 <script src="/assets/booking-modal.js?v=2" defer></script>

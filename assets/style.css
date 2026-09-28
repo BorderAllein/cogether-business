@@ -1019,3 +1019,32 @@ section.dark .tier-meta b{color:#fff}
 .sv2-values__tile strong{display:block;font-family:Arial,Helvetica,sans-serif;font-weight:800;color:var(--sv2-cyan,#078b9c);font-size:.95rem;letter-spacing:.04em;margin-bottom:.4rem}
 .sv2-values__tile span{color:var(--sv2-muted,#65777a);font-size:.8rem;line-height:1.5}
 @media(max-width:760px){.sv2-values{grid-template-columns:repeat(2,1fr)}}
+
+/* ======================================================================
+   SV2 STORYSCROLL — /warum-cogether/ guided 3-stage visual story. Desktop:
+   sticky large visual (right) crossfades between the 3 supplied concept
+   images as the narrative text (left) scrolls past each stage. These are
+   AI-generated CONCEPT VISUALIZATIONS, not real product screenshots — a
+   permanent on-image disclosure label makes that unmistakable. Mobile:
+   separate stacked text+image pairs, no sticky/crossfade.
+   ====================================================================== */
+.sv2-storyscroll{display:grid;grid-template-columns:.85fr 1.15fr;gap:4rem;align-items:start}
+.sv2-storyscroll__text{display:flex;flex-direction:column;gap:14rem;padding:2rem 0}
+.sv2-storyscroll__stage{opacity:.35;transition:opacity .4s ease}
+.sv2-storyscroll__stage.is-current{opacity:1}
+.sv2-storyscroll__stage span{display:inline-block;color:var(--sv2-cyan,#078b9c);font-weight:800;font-family:Arial,Helvetica,sans-serif;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.7rem}
+.sv2-storyscroll__stage h3{margin:0 0 .8rem;font-family:Arial,Helvetica,sans-serif;font-weight:800;color:var(--sv2-ink,#122a3b);font-size:1.5rem;line-height:1.25}
+.sv2-storyscroll__stage p{margin:0;color:var(--sv2-muted,#65777a);font-size:.98rem;line-height:1.65;max-width:32rem}
+.sv2-storyscroll__visual{position:sticky;top:6rem;border-radius:18px;overflow:hidden;box-shadow:0 30px 70px -22px rgba(12,34,49,.35);aspect-ratio:16/10;background:var(--sv2-navy)}
+.sv2-storyscroll__visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.03);transition:opacity .8s ease,transform .8s ease}
+.sv2-storyscroll__visual img.is-active{opacity:1;transform:scale(1)}
+.sv2-storyscroll__badge{position:absolute;top:1rem;left:1rem;z-index:2;background:rgba(12,34,49,.85);color:#fff;font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:.45rem .8rem;border-radius:999px;backdrop-filter:blur(4px)}
+.sv2-storyscroll__disclosure{position:absolute;bottom:0;left:0;right:0;z-index:2;margin:0;padding:.8rem 1.1rem;background:linear-gradient(0deg,rgba(8,20,28,.88),transparent);color:#dce9ea;font-size:.72rem;line-height:1.4}
+.sv2-storyscroll--mobile{display:none}
+@media(max-width:900px){
+  .sv2-storyscroll{display:none}
+  .sv2-storyscroll--mobile{display:flex;flex-direction:column;gap:2.4rem}
+  .sv2-storyscroll--mobile .sv2-storyscroll__stage{opacity:1}
+  .sv2-storyscroll--mobile .sv2-storyscroll__visual{position:relative;top:0;margin-top:1rem;aspect-ratio:16/11}
+  .sv2-storyscroll--mobile .sv2-storyscroll__visual img{position:absolute;opacity:1;transform:none}
+}
