@@ -976,3 +976,15 @@ section.dark .tier-meta b{color:#fff}
   .sv2-human-panel__text{padding:1.8rem 1.6rem}
   .sv2-human-panel__text p{font-size:1.2rem}
 }
+
+/* Story timeline sits on the sv2-founder navy background now (previously
+   inside section.dark, which had its own light-text override). Restore
+   readable contrast for its title/body text without touching layout. */
+.sv2-founder .story__step h4{color:#fff}
+.sv2-founder .story__step p{color:#c3d4d8}
+.sv2-founder .story__track:before{background:linear-gradient(180deg,var(--sv2-cyan-bright,#53d2df),rgba(83,210,223,.12))}
+.sv2-founder .story__step:before{background:var(--sv2-navy,#0c2231);border-color:var(--sv2-cyan-bright,#53d2df)}
+.sv2-founder .team-card h3{color:#fff}
+.sv2-founder .team-card__role{color:var(--sv2-cyan-bright,#53d2df)}
+.sv2-founder .team-card__text{color:#c3d4d8}
+.sv2-founder .team-card__photo{border-color:rgba(255,255,255,.14)}
