@@ -1053,3 +1053,5 @@ section.dark .tier-meta b{color:#fff}
 @media(prefers-reduced-motion:reduce){
   .sv2-storyscroll__stage{opacity:1}
 }
+/* Kompakte Hauptnavigation zwischen Burger-Umschaltung und Desktop (8 Menüpunkte inkl. Karriere) */
+@media(min-width:821px) and (max-width:1099px){.sv2-header .mainnav{gap:.95rem;flex-wrap:nowrap}.sv2-header .mainnav a{font-size:.76rem;white-space:nowrap}.sv2-header .brand small{display:none}}
