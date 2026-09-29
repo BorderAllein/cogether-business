@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /erstgespraech/
+
+Sitemap: https://business.cogether.de/sitemap.xml
