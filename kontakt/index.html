@@ -111,5 +111,6 @@ document.getElementById('navtoggle').addEventListener('click', function(){
 </script>
 <script src="/assets/booking-modal.js?v=2" defer></script>
 <script src="/assets/qualifier-modal.js?v=1" defer></script>
+<script>/* Co;Gether Herkunftsmessung: cookielos, nur Quelle (utm/Referrer) */(function(){try{var s=sessionStorage;if(s.getItem("cg_src_sent"))return;var v=s.getItem("cg_vid")||(crypto.randomUUID?crypto.randomUUID():"10000000-1000-4000-8000-100000000000".replace(/[018]/g,function(c){return(c^crypto.getRandomValues(new Uint8Array(1))[0]&15>>c/4).toString(16)}));s.setItem("cg_vid",v);var q=new URLSearchParams(location.search),p=new URLSearchParams({url:location.href,ref:document.referrer,vid:v});["utm_source","utm_medium","utm_campaign","utm_content","utm_term"].forEach(function(k){var x=q.get(k);if(x)p.set(k,x)});if(navigator.sendBeacon("https://cogether.de/wp-json/cogether/v1/growth/beacon?"+p.toString()))s.setItem("cg_src_sent","1")}catch(e){}})();</script>
 </body>
 </html>
