@@ -1055,3 +1055,6 @@ section.dark .tier-meta b{color:#fff}
 }
 /* Kompakte Hauptnavigation zwischen Burger-Umschaltung und Desktop (8 Menüpunkte inkl. Karriere) */
 @media(min-width:821px) and (max-width:1099px){.sv2-header .mainnav{gap:.95rem;flex-wrap:nowrap}.sv2-header .mainnav a{font-size:.76rem;white-space:nowrap}.sv2-header .brand small{display:none}}
+.sv2-footer__bottom nav{display:flex;align-items:center;gap:1rem}
+.sv2-footer__social{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;color:#415d69;transition:color .2s,background .2s}
+.sv2-footer__social:hover,.sv2-footer__social:focus-visible{color:#fff;background:#0a66c2}
