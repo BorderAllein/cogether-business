@@ -1058,3 +1058,16 @@ section.dark .tier-meta b{color:#fff}
 .sv2-footer__bottom nav{display:flex;align-items:center;gap:1rem}
 .sv2-footer__social{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;color:#415d69;transition:color .2s,background .2s}
 .sv2-footer__social:hover,.sv2-footer__social:focus-visible{color:#fff;background:#0a66c2}
+
+/* FUNNEL V1 (2026-10-03): Setup-Finder -- Ergebnis per E-Mail */
+.qualifier-modal__or{display:flex;align-items:center;gap:.8rem;margin:1.2rem 0 1rem;color:var(--ink-muted,#6b7a7e);font-size:.8rem;text-transform:uppercase;letter-spacing:.08em}
+.qualifier-modal__or::before,.qualifier-modal__or::after{content:"";flex:1;height:1px;background:var(--border,#dfe7e9)}
+.qualifier-modal__mail{display:flex;flex-direction:column;gap:.7rem;position:relative}
+.qualifier-modal__mail>label:first-child{font-weight:700;font-size:.9rem}
+.qualifier-modal__mail input[type=email]{width:100%;padding:.8rem .95rem;border:1.5px solid var(--border,#cfdadd);border-radius:12px;font:inherit}
+.qualifier-modal__mail input[type=email]:focus{outline:0;border-color:var(--teal-deep,#2f6169);box-shadow:0 0 0 3px rgba(47,97,105,.15)}
+.qualifier-modal__consent{display:flex;gap:.6rem;align-items:flex-start;font-size:.78rem;line-height:1.45;color:var(--ink-muted,#5b7078)}
+.qualifier-modal__consent input{margin-top:.2rem;flex:0 0 auto}
+.qualifier-modal__consent a{color:var(--teal-deep,#2f6169);text-decoration:underline}
+.qualifier-modal__msg{min-height:1.2em;margin:0;font-size:.82rem;color:#9b3a30}
+.qualifier-modal__ok{background:#e7f5ed;border-radius:12px;padding:1rem;margin:0;font-size:.92rem;color:#1f5a3a}

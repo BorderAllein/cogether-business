@@ -13,7 +13,10 @@
   ];
 
   var state = {tier:null,size:null};
-  var modal, panel;
+  var modal, panel, openedAt = 0;
+  var ENDPOINT = 'https://cogether.de/wp-json/cogether/v1/funnel/finder';
+  // Finder-Groesse -> Geschaeftsphase der Buchung (gleiche Zuordnung wie serverseitig)
+  var STAGE = {solo:'solo', small:'building', group:'small_team', team:'company_academy'};
 
   function build(){
     modal = document.createElement('div');
@@ -79,17 +82,51 @@
     html += '<h3 class="qualifier-modal__title">Alles klar.</h3>';
     html += '<div class="qualifier-modal__summary">Passendes Paket: <strong>'+tierLabel(state.tier)+'</strong><br>Aktuelle Größe: <strong>'+sizeLabel(state.size)+'</strong><br><br>Im Erstgespräch schauen wir gemeinsam, ob das genau passt oder ob eine andere Stufe sinnvoller ist.</div>';
     html += '<button type="button" class="btn btn-primary" data-open-booking style="width:100%;justify-content:center">Termin mit Sven auswählen →</button>';
+    // FUNNEL V1 Stufe 2: Ergebnis per E-Mail (auch ohne Terminbuchung)
+    html += '<div class="qualifier-modal__or"><span>oder</span></div>';
+    html += '<form class="qualifier-modal__mail" novalidate>' +
+      '<label for="q-email">Ergebnis per E-Mail erhalten</label>' +
+      '<input type="email" id="q-email" name="email" autocomplete="email" placeholder="Deine E-Mail-Adresse" required>' +
+      '<div style="position:absolute;left:-9999px" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>' +
+      '<label class="qualifier-modal__consent"><input type="checkbox" name="consent" value="1"> <span>Ich möchte mein Ergebnis per E-Mail erhalten. Das Co;Gether-Team darf mich dazu einmalig persönlich kontaktieren. Es gilt die <a href="https://cogether.de/datenschutz/" target="_blank" rel="noopener">Datenschutzerklärung</a>.</span></label>' +
+      '<button type="submit" class="btn btn-secondary" style="width:100%;justify-content:center">Ergebnis per E-Mail senden</button>' +
+      '<p class="qualifier-modal__msg" role="status" aria-live="polite"></p></form>';
     panel.innerHTML = html;
     panel.querySelector('[data-back]').addEventListener('click', renderStep2);
     panel.querySelector('[data-open-booking]').addEventListener('click', function(){
       close();
-      if (window.openBookingModal) window.openBookingModal();
+      if (window.openBookingModal) window.openBookingModal({package: (state.tier || '').toUpperCase(), business_stage: STAGE[state.size] || ''});
     });
+    panel.querySelector('.qualifier-modal__mail').addEventListener('submit', submitMail);
+  }
+
+  function submitMail(e){
+    e.preventDefault();
+    var form = e.target, msg = form.querySelector('.qualifier-modal__msg'), btn = form.querySelector('button[type=submit]');
+    var email = form.email.value.trim();
+    if (email.indexOf('@') < 1 || email.indexOf('.') < 0) { msg.textContent = 'Bitte gib eine gültige E-Mail-Adresse ein.'; return; }
+    if (!form.consent.checked) { msg.textContent = 'Bitte stimme dem Datenschutzhinweis zu.'; return; }
+    btn.disabled = true; msg.textContent = 'Wird gesendet …';
+    var a = window.cgAttribution || {};
+    var body = new URLSearchParams({email: email, tier: state.tier, size: state.size, consent: '1', website: form.website.value, ts: String(openedAt),
+      utm_source: a.utm_source || '', utm_medium: a.utm_medium || '', utm_campaign: a.utm_campaign || '', ref: a.ref || '', page: window.location.href.slice(0, 300)});
+    fetch(ENDPOINT, {method: 'POST', body: body, mode: 'cors'})
+      .then(function(r){ return r.json().catch(function(){ return {}; }).then(function(j){ return {status: r.status, json: j}; }); })
+      .then(function(res){
+        if (res.json && res.json.ok) {
+          form.innerHTML = '<p class="qualifier-modal__ok"><strong>Danke!</strong> Wir haben Dir Dein Ergebnis per E-Mail geschickt. Schau auch im Spam-Ordner nach, falls nichts ankommt.</p>';
+        } else {
+          btn.disabled = false;
+          msg.textContent = res.status === 429 ? 'Zu viele Versuche. Bitte warte kurz.' : 'Das hat leider nicht geklappt. Bitte prüfe die Angaben oder buche direkt einen Termin.';
+        }
+      })
+      .catch(function(){ btn.disabled = false; msg.textContent = 'Verbindung fehlgeschlagen. Bitte versuche es erneut oder buche direkt einen Termin.'; });
   }
 
   function open(){
     if (!modal) build();
     state = {tier:null,size:null};
+    openedAt = Date.now();
     renderStep1();
     modal.classList.add('open');
     document.body.classList.add('booking-modal-lock');
