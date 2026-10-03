@@ -89,6 +89,7 @@
       '<input type="email" id="q-email" name="email" autocomplete="email" placeholder="Deine E-Mail-Adresse" required>' +
       '<div style="position:absolute;left:-9999px" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>' +
       '<label class="qualifier-modal__consent"><input type="checkbox" name="consent" value="1"> <span>Ich möchte mein Ergebnis per E-Mail erhalten. Das Co;Gether-Team darf mich dazu einmalig persönlich kontaktieren. Es gilt die <a href="https://cogether.de/datenschutz/" target="_blank" rel="noopener">Datenschutzerklärung</a>.</span></label>' +
+      '<label class="qualifier-modal__consent"><input type="checkbox" name="sequence" value="1"> <span>Optional: Ich möchte zusätzlich vier kurze Mails zum Paket in den nächsten zehn Tagen erhalten. Ich bestätige das per Link in einer Mail und kann mich jederzeit abmelden.</span></label>' +
       '<button type="submit" class="btn btn-secondary" style="width:100%;justify-content:center">Ergebnis per E-Mail senden</button>' +
       '<p class="qualifier-modal__msg" role="status" aria-live="polite"></p></form>';
     panel.innerHTML = html;
@@ -106,15 +107,16 @@
     var email = form.email.value.trim();
     if (email.indexOf('@') < 1 || email.indexOf('.') < 0) { msg.textContent = 'Bitte gib eine gültige E-Mail-Adresse ein.'; return; }
     if (!form.consent.checked) { msg.textContent = 'Bitte stimme dem Datenschutzhinweis zu.'; return; }
+    var seqChecked = form.sequence.checked;
     btn.disabled = true; msg.textContent = 'Wird gesendet …';
     var a = window.cgAttribution || {};
-    var body = new URLSearchParams({email: email, tier: state.tier, size: state.size, consent: '1', website: form.website.value, ts: String(openedAt),
+    var body = new URLSearchParams({email: email, tier: state.tier, size: state.size, consent: '1', sequence: form.sequence.checked ? '1' : '', website: form.website.value, ts: String(openedAt),
       utm_source: a.utm_source || '', utm_medium: a.utm_medium || '', utm_campaign: a.utm_campaign || '', ref: a.ref || '', page: window.location.href.slice(0, 300)});
     fetch(ENDPOINT, {method: 'POST', body: body, mode: 'cors'})
       .then(function(r){ return r.json().catch(function(){ return {}; }).then(function(j){ return {status: r.status, json: j}; }); })
       .then(function(res){
         if (res.json && res.json.ok) {
-          form.innerHTML = '<p class="qualifier-modal__ok"><strong>Danke!</strong> Wir haben Dir Dein Ergebnis per E-Mail geschickt. Schau auch im Spam-Ordner nach, falls nichts ankommt.</p>';
+          form.innerHTML = '<p class="qualifier-modal__ok"><strong>Danke!</strong> Wir haben Dir Dein Ergebnis per E-Mail geschickt.' + (seqChecked ? ' Bitte bestätige außerdem in der zweiten Mail Deine Anmeldung zur Mail-Folge.' : '') + ' Schau auch im Spam-Ordner nach, falls nichts ankommt.</p>';
         } else {
           btn.disabled = false;
           msg.textContent = res.status === 429 ? 'Zu viele Versuche. Bitte warte kurz.' : 'Das hat leider nicht geklappt. Bitte prüfe die Angaben oder buche direkt einen Termin.';
