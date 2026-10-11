@@ -1071,3 +1071,58 @@ section.dark .tier-meta b{color:#fff}
 .qualifier-modal__consent a{color:var(--teal-deep,#2f6169);text-decoration:underline}
 .qualifier-modal__msg{min-height:1.2em;margin:0;font-size:.82rem;color:#9b3a30}
 .qualifier-modal__ok{background:#e7f5ed;border-radius:12px;padding:1rem;margin:0;font-size:.92rem;color:#1f5a3a}
+
+/* ============ PREISE & VERGLEICH – Redesign 2026-10-11 (scoped auf #preise) ============ */
+#preise .pricing-grid{align-items:stretch;gap:1.25rem;margin-top:2rem}
+#preise .plan{padding:1.9rem 1.55rem 1.6rem;border-radius:22px;border:1px solid rgba(11,23,35,.08);gap:1rem;overflow:hidden;box-shadow:0 1px 2px rgba(11,23,35,.04),0 22px 44px -30px rgba(11,23,35,.28);transition:transform .25s ease,box-shadow .25s ease}
+#preise .plan:hover{transform:translateY(-6px);box-shadow:0 2px 4px rgba(11,23,35,.05),0 30px 56px -28px rgba(11,23,35,.34)}
+#preise .plan:after{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:linear-gradient(90deg,#53d2df,#4f8f98)}
+#preise .plan:nth-child(1):after{background:linear-gradient(90deg,#9fd6dc,#4f8f98)}
+#preise .plan:nth-child(3):after{background:linear-gradient(90deg,#4f8f98,#2f6d76)}
+#preise .plan:nth-child(4):after{background:linear-gradient(90deg,#c97a52,#e3a07b)}
+#preise .plan__icon{width:46px;height:46px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:#e8f3f4;color:#2f6d76}
+#preise .plan__icon svg{width:24px;height:24px}
+#preise .plan:nth-child(4) .plan__icon{background:#faeee6;color:#c97a52}
+#preise .plan .tag{margin-top:-.2rem}
+#preise .plan .price{font-size:2.5rem;line-height:1;letter-spacing:-.035em;margin:.1rem 0 .2rem}
+#preise .plan .price small{font-size:.8rem;letter-spacing:0}
+#preise .plan>p:not(.plan-includes){line-height:1.5}
+#preise .plan .plan-includes{font-weight:700;color:#2f6d76;font-size:.82rem;margin:.2rem 0 -.2rem}
+#preise .plan ul{list-style:none;padding:0;gap:.55rem}
+#preise .plan ul li{position:relative;padding-left:1.7rem;line-height:1.4}
+#preise .plan ul li:before{content:"✓";position:absolute;left:0;top:.05rem;width:1.15rem;height:1.15rem;border-radius:50%;background:#e1f1f2;color:#2f6d76;font-size:.68rem;font-weight:800;display:flex;align-items:center;justify-content:center}
+#preise .plan .setup{border-top:0;padding:.4rem .85rem;background:var(--bg-soft);border-radius:99px;font-weight:600;color:var(--ink);align-self:flex-start;margin-top:auto}
+#preise .plan a.btn{margin-top:.2rem}
+#preise .plan a.btn-link{margin-top:0}
+#preise .plan.featured{background:linear-gradient(165deg,#0c2231 0%,#163641 100%);border-color:#2f6d76;color:#fff;box-shadow:0 0 0 1px rgba(83,210,223,.25),0 34px 64px -26px rgba(7,139,156,.55)}
+#preise .plan.featured:after{background:linear-gradient(90deg,#53d2df,#7fc0c9,#e3a07b)}
+@media(min-width:1001px){#preise .plan.featured{transform:translateY(-10px)}#preise .plan.featured:hover{transform:translateY(-14px)}}
+#preise .plan.featured:before{background:linear-gradient(90deg,#53d2df,#7fc0c9);color:#0c2231;font-weight:800;letter-spacing:.06em;text-transform:uppercase;font-size:.68rem;padding:.3rem .8rem;border-radius:99px;top:12px;left:auto;right:14px;transform:none}
+#preise .plan.featured .plan__icon{background:rgba(83,210,223,.16);color:#53d2df}
+#preise .plan.featured .tag{color:#53d2df}
+#preise .plan.featured .price{color:#fff}
+#preise .plan.featured .price small,#preise .plan.featured>p{color:rgba(255,255,255,.74)!important}
+#preise .plan.featured .plan-includes{color:#53d2df}
+#preise .plan.featured ul{color:rgba(255,255,255,.88)}
+#preise .plan.featured ul li:before{background:rgba(83,210,223,.2);color:#53d2df}
+#preise .plan.featured .setup{background:rgba(255,255,255,.1);color:#fff}
+#preise .plan.featured a.btn-link{color:#53d2df!important}
+#preise .compare{margin-top:2.5rem;border-radius:22px;border:1px solid rgba(11,23,35,.08);overflow:auto;box-shadow:0 24px 50px -34px rgba(11,23,35,.3);background:#fff}
+#preise .compare__table{border-collapse:separate;border-spacing:0;width:100%;min-width:640px}
+#preise .compare__table thead th{background:#0c2231;color:#fff;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;padding:1.1rem .8rem;text-align:center}
+#preise .compare__table thead th:first-child{text-align:left;padding-left:1.4rem}
+#preise .compare__table thead th:nth-child(3){background:linear-gradient(180deg,#078b9c,#2f6d76)}
+#preise .compare__table tbody td{padding:.95rem .8rem;text-align:center;border-top:1px solid rgba(11,23,35,.07);font-weight:500}
+#preise .compare__table tbody td:first-child{text-align:left;padding-left:1.4rem;font-weight:600;color:var(--ink)}
+#preise .compare__table tbody td:nth-child(3){background:rgba(7,139,156,.06)}
+#preise .compare__table tbody tr:hover td{background:#f4f9fa}
+#preise .compare__table tbody tr:hover td:nth-child(3){background:rgba(7,139,156,.11)}
+#preise .compare__table td.y span,#preise .compare__table td.n span{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;font-size:.8rem;font-weight:800}
+#preise .compare__table td.y span{background:#d7eff1;color:#157a88}
+#preise .compare__table td:nth-child(3).y span{background:#078b9c;color:#fff}
+#preise .compare__table td.n span{color:#b6c3c7;font-weight:600}
+#preise .plan .setup{white-space:nowrap;font-size:.76rem}
+#preise .plan a.btn{white-space:nowrap;font-size:.9rem;padding-inline:.8rem}
+#preise .plan .price.price--text,#preise .plan:nth-child(4) .price{font-size:2rem;line-height:1.1;white-space:nowrap}
+#preise .plan.featured a.btn-primary{background:linear-gradient(135deg,#53d2df,#2fb5c4);color:#0c2231!important;border-color:transparent;font-weight:800;box-shadow:0 10px 24px -10px rgba(83,210,223,.7)}
+#preise .plan.featured a.btn-primary:hover{filter:brightness(1.07)}
