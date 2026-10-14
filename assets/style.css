@@ -1200,3 +1200,5 @@ main p,.sv2-section p,section p{font-size:max(1.05rem,16.5px)}
 .sv2-header .sv2-pill-cta:after{background:linear-gradient(100deg,transparent,rgba(7,139,156,.28),transparent)}
 @media(max-width:820px){.sv2-header .mainnav{border-top-color:rgba(255,255,255,.2)}.sv2-header:after{height:56px}}
 header.site.sv2-header{background:linear-gradient(180deg,#0a4350 0%,#0e5865 100%)!important;border-bottom:0!important;box-shadow:none!important}
+/* Kopfzeile: Knopf bleibt rechts, nie unter dem Logo (Desktop) */
+@media(min-width:821px){header.site.sv2-header .wrap{flex-wrap:nowrap}.sv2-header .brand{flex:0 0 auto}.sv2-header .brand small{white-space:nowrap}.sv2-header .mainnav{flex:1 1 auto;min-width:0}.sv2-header .sv2-pill-cta{flex:0 0 auto}}
