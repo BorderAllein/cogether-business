@@ -1159,3 +1159,5 @@ main p,.sv2-section p,section p{font-size:max(1.05rem,16.5px)}
 .sv2-testimonial__id,.problem-diagram__chip,.stat span{font-size:.9rem}
 .btn,.sv2-pill-cta{font-size:max(1rem,15.5px)}
 @media(max-width:700px){main p,.sv2-section p,section p{font-size:1.06rem}.sv2-section li,section li{font-size:1.02rem}}
+.site .mainnav a,.sv2-header .mainnav a,header .mainnav a{font-size:.95rem!important}
+.site .sv2-footer__col a{font-size:.95rem!important}
