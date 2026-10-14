@@ -1161,3 +1161,7 @@ main p,.sv2-section p,section p{font-size:max(1.05rem,16.5px)}
 @media(max-width:700px){main p,.sv2-section p,section p{font-size:1.06rem}.sv2-section li,section li{font-size:1.02rem}}
 .site .mainnav a,.sv2-header .mainnav a,header .mainnav a{font-size:.95rem!important}
 .site .sv2-footer__col a{font-size:.95rem!important}
+.sv2-product .pfilm{grid-column:1/-1;max-width:1040px;margin:2.2rem auto 0;border-radius:22px;overflow:hidden;background:#0c2231;box-shadow:0 34px 70px -34px rgba(7,139,156,.6)}
+.sv2-product .pfilm video{display:block;width:100%;height:auto;background:#0c2231}
+.sv2-product .pfilm figcaption{padding:.9rem 1.2rem}
+@media (prefers-reduced-motion:reduce){.sv2-product figure{transition:none}}
