@@ -1243,11 +1243,8 @@ header.site.sv2-header{background:linear-gradient(180deg,#0a4350 0%,#0d5360 46%,
 @keyframes pmFade{from{opacity:0}}@keyframes pmIn{from{opacity:0;transform:translateY(18px) scale(.97)}}
 @media (prefers-reduced-motion:reduce){.pmodal__bg,.pmodal__box{animation:none}.sv2-product .pshot-hint{transition:none}}
 
-/* UNIVERSE-Netzwerk: vier Punkte wandern nacheinander auf die Ecken der Raute, dann zeichnen sich die Linien 2026-10-14 */
-.mockup--network .hub{left:var(--cx)!important;top:var(--cy)!important;transform:translate(calc(-50% + var(--sx,0px)),calc(-50% + var(--sy,0px))) scale(.8);opacity:.75;transition:transform 1s cubic-bezier(.2,.8,.2,1),opacity .6s ease,box-shadow .6s ease;transition-delay:calc((var(--i,1) - 1) * .45s)}
-.mockup--network.is-active .hub{transform:translate(-50%,-50%) scale(1);opacity:1}
-.mockup--network svg line{vector-effect:non-scaling-stroke;stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset .9s ease-out}
-.mockup--network.is-active svg line{stroke-dashoffset:0}
-.mockup--network.is-active svg line:nth-child(1){transition-delay:1.5s}.mockup--network.is-active svg line:nth-child(2){transition-delay:1.7s}.mockup--network.is-active svg line:nth-child(3){transition-delay:1.9s}.mockup--network.is-active svg line:nth-child(4){transition-delay:2.1s}.mockup--network.is-active svg line:nth-child(5){transition-delay:2.3s}
-.mockup--network.is-active .hub{box-shadow:0 0 0 4px rgba(127,192,201,.2),0 0 18px 2px rgba(83,210,223,.35)}
-@media (prefers-reduced-motion:reduce){.mockup--network .hub{transform:translate(-50%,-50%) scale(1);opacity:1;transition:none}.mockup--network svg line{stroke-dashoffset:0;transition:none}}
+/* UNIVERSE-Netzwerk 2026-10-14: Punkte + Linien per Skript animiert (Chaos -> geschlossene Raute) */
+.mockup--network .hub{left:var(--cx);top:var(--cy);transform:translate(-50%,-50%);z-index:2}
+.mockup--network svg line{vector-effect:non-scaling-stroke;stroke-linecap:round;transition:stroke .6s ease,stroke-width .6s ease}
+.mockup--network.is-complete svg line{stroke:rgba(127,227,238,.78);stroke-width:2}
+.mockup--network.is-complete .hub{box-shadow:0 0 0 4px rgba(127,192,201,.22),0 0 20px 3px rgba(83,210,223,.45)}
