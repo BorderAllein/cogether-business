@@ -1214,3 +1214,11 @@ header.site.sv2-header{background:linear-gradient(180deg,#0a4350 0%,#0d5360 46%,
 .sv2-ecosystem{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem 1rem;max-width:860px;margin:2.2rem auto 0}
 .sv2-ecosystem__node{font-size:1rem}
 .sv2-ecosystem__node--core{font-size:1.1rem;padding-inline:1.5rem}
+
+/* ZWISCHENUEBERSCHRIFTEN: einheitliche Hervorhebung + dezenter Marker bei Schluesselaussagen 2026-10-14 */
+.sv2-h2 em,.sv2-section h2 em,.sv2-modules h2 em,.sv2-cta h2 em{font-style:normal;color:var(--sv2-cyan,#078b9c)}
+.sv2-h2 em.key,.sv2-section h2 em.key,.sv2-modules h2 em.key{position:relative;color:#056c7a;background-image:linear-gradient(transparent 66%,rgba(83,210,223,.34) 66%,rgba(83,210,223,.34) 90%,transparent 90%);background-repeat:no-repeat;background-size:100% 100%;padding:0 .08em;border-radius:3px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+@supports (animation-timeline:view()){.sv2-h2 em.key,.sv2-section h2 em.key,.sv2-modules h2 em.key{background-size:0 100%;animation:keyMarker linear both;animation-timeline:view();animation-range:entry 20% cover 38%}}
+@keyframes keyMarker{to{background-size:100% 100%}}
+@media (prefers-reduced-motion:reduce){.sv2-h2 em.key,.sv2-section h2 em.key,.sv2-modules h2 em.key{animation:none;background-size:100% 100%}}
+.sv2-cta h2 em.key,.sv2-fit h2 em.key{color:#7fe3ee;background-image:linear-gradient(transparent 66%,rgba(127,227,238,.28) 66%,rgba(127,227,238,.28) 90%,transparent 90%)}
