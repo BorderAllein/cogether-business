@@ -29,7 +29,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/style.css?v=38">
+<link rel="stylesheet" href="/assets/style.css?v=39">
 
 <script type="application/ld+json">
 {
@@ -358,16 +358,16 @@
       <div class="showcase__visual">
         <div class="mockup mockup--network mockup--xl">
           <svg viewBox="0 0 300 120" preserveAspectRatio="none">
-            <line x1="40" y1="60" x2="150" y2="20"></line>
-            <line x1="40" y1="60" x2="150" y2="100"></line>
-            <line x1="150" y1="20" x2="260" y2="60"></line>
-            <line x1="150" y1="100" x2="260" y2="60"></line>
-            <line x1="150" y1="20" x2="150" y2="100"></line>
+            <line pathLength="1" x1="40" y1="60" x2="150" y2="20"></line>
+            <line pathLength="1" x1="40" y1="60" x2="150" y2="100"></line>
+            <line pathLength="1" x1="150" y1="20" x2="260" y2="60"></line>
+            <line pathLength="1" x1="150" y1="100" x2="260" y2="60"></line>
+            <line pathLength="1" x1="150" y1="20" x2="150" y2="100"></line>
           </svg>
-          <div class="hub" style="left:33px;top:53px"></div>
-          <div class="hub" style="left:143px;top:13px"></div>
-          <div class="hub" style="left:143px;top:93px"></div>
-          <div class="hub" style="left:253px;top:53px"></div>
+          <div class="hub" style="--cx:13.33%;--cy:50%;--sx:-46px;--sy:-62px;--i:1"></div>
+          <div class="hub" style="--cx:50%;--cy:16.67%;--sx:74px;--sy:58px;--i:2"></div>
+          <div class="hub" style="--cx:50%;--cy:83.33%;--sx:-88px;--sy:-44px;--i:3"></div>
+          <div class="hub" style="--cx:86.67%;--cy:50%;--sx:-52px;--sy:70px;--i:4"></div>
         </div>
       </div>
       <div class="showcase__text">
@@ -879,5 +879,6 @@ document.getElementById('navtoggle').addEventListener('click', function(){
 <script src="/assets/qualifier-modal.js?v=3" defer></script>
 <script>/* CoGether Herkunftsmessung: ohne Cookies, ohne Speicherung im Browser; nur beim Einstieg von aussen */(function(){try{var r=document.referrer,h="";try{h=r?new URL(r).host:""}catch(e){}var q=new URLSearchParams(location.search);if(h===location.host&&!q.get("utm_source"))return;var id=crypto.randomUUID?crypto.randomUUID():"10000000-1000-4000-8000-100000000000".replace(/[018]/g,function(c){return(c^crypto.getRandomValues(new Uint8Array(1))[0]&15>>c/4).toString(16)});var p=new URLSearchParams({url:location.href,ref:r,vid:id});["utm_source","utm_medium","utm_campaign","utm_content","utm_term"].forEach(function(k){var x=q.get(k);if(x)p.set(k,x)});navigator.sendBeacon("https://cogether.de/wp-json/cogether/v1/growth/beacon?"+p.toString())}catch(e){}})();</script>
 <script src="/assets/lightbox.js?v=1" defer></script>
+<script src="/assets/network-anim.js?v=1" defer></script>
 </body>
 </html>
