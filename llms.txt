@@ -24,6 +24,10 @@ CoGether verbindet Klient:innen, Termine, Learning, Programme, Aufgaben und Vert
 - [Karriere / Vertrieb](https://business.cogether.de/vertrieb/): Bewerbung als Vertriebspartner:in bei CoGether, Premium-Vertrieb ohne Druck mit klarer Verantwortung.
 - [Kontakt](https://business.cogether.de/kontakt/): Orientierung und Anfrage.
 
+## Einbindung
+
+CoGether kann in eine bestehende Website eingebunden werden (zum Beispiel Erstgespräch-Buchung, Anmeldung und Zugang zum Mitgliederbereich). Ein Umzug der Website ist nicht nötig. Der Umfang hängt von der Website ab und wird im Erstgespräch geklärt.
+
 ## Kurzdefinition
 
 CoGether ist kein einzelnes Werkzeug, sondern die gemeinsame Infrastruktur, in der Coaches arbeiten und Klient:innen ihren Entwicklungsraum haben. Der Unterschied zwischen den Stufen liegt in Einrichtungstiefe und Prozesskomplexität, nicht in abgeschalteten Grundfunktionen.
