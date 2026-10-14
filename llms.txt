@@ -11,6 +11,12 @@ CoGether verbindet Klient:innen, Termine, Learning, Programme, Aufgaben und Vert
 - [PRO](https://business.cogether.de/pro/): Komplexität steuern für etablierte Unternehmen mit mehreren operativen Bereichen und Vertriebs-Arbeitsbereich. 399 €/Monat, 2.990 € einmalige Einrichtung.
 - [UNIVERSE](https://business.cogether.de/universe/): Individuelle Infrastruktur nach Bedarf, wenn Standardpakete nicht passen. Preis auf Anfrage.
 
+## Für wen
+
+- [Mentoring Software](https://business.cogether.de/mentoring-software/): für Mentor:innen und kleine Institute.
+- [Software für Berater:innen](https://business.cogether.de/software-fuer-berater/): für Beratung, die Menschen begleitet (nicht für Zeiterfassung oder Projektabrechnung).
+- [Software für Trainer:innen und Institute](https://business.cogether.de/software-fuer-trainer-und-institute/): für Programme und Ausbildungen über Monate.
+
 ## Weitere Seiten
 
 - [Startseite](https://business.cogether.de/): Überblick, Vergleich der Stufen, häufige Fragen.
