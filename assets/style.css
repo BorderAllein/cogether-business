@@ -1127,3 +1127,14 @@ section.dark .tier-meta b{color:#fff}
 #preise .plan .price.price--text,#preise .plan:nth-child(4) .price{font-size:2rem;line-height:1.1;white-space:nowrap}
 #preise .plan.featured a.btn-primary{background:linear-gradient(135deg,#53d2df,#2fb5c4);color:#0c2231!important;border-color:transparent;font-weight:800;box-shadow:0 10px 24px -10px rgba(83,210,223,.7)}
 #preise .plan.featured a.btn-primary:hover{filter:brightness(1.07)}
+
+/* PRODUKTANSICHTEN (Demo-Ansichten mit Beispieldaten) 2026-10-14 */
+.sv2-product .pshots{display:grid;gap:1.6rem;grid-template-columns:repeat(2,1fr);margin-top:2.2rem}
+.sv2-product .pshots--one{grid-template-columns:1fr;max-width:980px;margin-inline:auto}
+@media(max-width:800px){.sv2-product .pshots{grid-template-columns:1fr}}
+.sv2-product figure{margin:0;border-radius:22px;overflow:hidden;background:#0c2231;box-shadow:0 30px 60px -34px rgba(12,34,49,.55);transition:transform .3s ease,box-shadow .3s ease}
+.sv2-product figure:hover{transform:translateY(-5px);box-shadow:0 40px 70px -32px rgba(7,139,156,.55)}
+.sv2-product figure img{display:block;width:100%;height:auto}
+.sv2-product figcaption{padding:.9rem 1.2rem;color:#cfe0e3;font-size:.9rem;line-height:1.45}
+.sv2-product figcaption b{color:#fff;display:block;font-size:1rem;margin-bottom:.15rem}
+.sv2-product .pshots__note{text-align:center;color:var(--sv2-muted,#65777a);font-size:.82rem;margin-top:1.2rem}
