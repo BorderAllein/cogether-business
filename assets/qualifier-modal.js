@@ -88,7 +88,7 @@
       '<label for="q-email">Ergebnis per E-Mail erhalten</label>' +
       '<input type="email" id="q-email" name="email" autocomplete="email" placeholder="Deine E-Mail-Adresse" required>' +
       '<div style="position:absolute;left:-9999px" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>' +
-      '<label class="qualifier-modal__consent"><input type="checkbox" name="consent" value="1"> <span>Ich möchte mein Ergebnis per E-Mail erhalten. Das Co;Gether-Team darf mich dazu einmalig persönlich kontaktieren. Es gilt die <a href="https://cogether.de/datenschutz/" target="_blank" rel="noopener">Datenschutzerklärung</a>.</span></label>' +
+      '<label class="qualifier-modal__consent"><input type="checkbox" name="consent" value="1"> <span>Ich möchte mein Ergebnis per E-Mail erhalten. Das CoGether-Team darf mich dazu einmalig persönlich kontaktieren. Es gilt die <a href="https://cogether.de/datenschutz/" target="_blank" rel="noopener">Datenschutzerklärung</a>.</span></label>' +
       '<label class="qualifier-modal__consent"><input type="checkbox" name="sequence" value="1"> <span>Optional: Ich möchte zusätzlich vier kurze Mails zum Paket in den nächsten zehn Tagen erhalten. Ich bestätige das per Link in einer Mail und kann mich jederzeit abmelden.</span></label>' +
       '<button type="submit" class="btn btn-secondary" style="width:100%;justify-content:center">Ergebnis per E-Mail senden</button>' +
       '<p class="qualifier-modal__msg" role="status" aria-live="polite"></p></form>';
