@@ -1138,3 +1138,24 @@ section.dark .tier-meta b{color:#fff}
 .sv2-product figcaption{padding:.9rem 1.2rem;color:#cfe0e3;font-size:.9rem;line-height:1.45}
 .sv2-product figcaption b{color:#fff;display:block;font-size:1rem;margin-bottom:.15rem}
 .sv2-product .pshots__note{text-align:center;color:var(--sv2-muted,#65777a);font-size:.82rem;margin-top:1.2rem}
+
+/* LESBARKEIT 2026-10-14: Mindestgroessen fuer Fliesstext, Listen, Navigation, Tabellen und Etiketten */
+main p,.sv2-section p,section p{font-size:max(1.05rem,16.5px)}
+.sv2-hero__lede,.hero .lede,.lede,.section-lede{font-size:clamp(1.15rem,1.05rem + .35vw,1.3rem);line-height:1.6}
+.sv2-lead{font-size:clamp(1.1rem,1rem + .3vw,1.25rem);line-height:1.6}
+.sv2-section li,section li,.tier-row__caps li,.sv2h-hero-checks li{font-size:max(1rem,15.5px);line-height:1.5}
+.mainnav a{font-size:.95rem}
+.sv2-footer__col a,.sv2-footer__col span{font-size:.95rem}
+.compare__table td,.compare__table th{font-size:max(.95rem,15px)}
+.faq-item p,.faq-item summary{font-size:1.05rem}
+.usecase-tile p,.story__step p,.pipeline__step p{font-size:1rem}
+.statbar__item span{font-size:.92rem}
+.kicker,.sv2-eyebrow,.plan .tag,.showcase__text .tag{font-size:.8rem}
+.plan>p,.plan .plan-includes{font-size:.98rem!important}
+.plan ul li{font-size:.98rem}
+.plan .setup{font-size:.86rem!important}
+.plan a.btn-link{font-size:.98rem}
+.plan .price small{font-size:.9rem}
+.sv2-testimonial__id,.problem-diagram__chip,.stat span{font-size:.9rem}
+.btn,.sv2-pill-cta{font-size:max(1rem,15.5px)}
+@media(max-width:700px){main p,.sv2-section p,section p{font-size:1.06rem}.sv2-section li,section li{font-size:1.02rem}}
