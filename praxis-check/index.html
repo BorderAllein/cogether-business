@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Praxis-Check für Coaches: Wie viel Struktur braucht Dein Betrieb? | CoGether</title>
-<meta name="description" content="Sechs kurze Fragen, zwei Minuten: Der Praxis-Check zeigt Dir ehrlich, ob und welches System für Deinen Coaching-Betrieb heute sinnvoll ist. Deine Antworten bleiben in Deinem Browser.">
+<meta name="description" content="Sechs kurze Fragen, zwei Minuten: Der Praxis-Check zeigt Dir ehrlich, ob und welches System für Deinen Coaching-Betrieb heute sinnvoll ist. Die Auswertung läuft in Deinem Browser. Gespeichert wird nur, wenn Du das Ergebnis per E-Mail anforderst.">
 <meta property="og:locale" content="de_DE">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="CoGether Business">
 <meta property="og:title" content="Praxis-Check für Coaches: Wie viel Struktur braucht Dein Betrieb?">
-<meta property="og:description" content="Sechs kurze Fragen, zwei Minuten, eine ehrliche Einschätzung. Deine Antworten bleiben in Deinem Browser.">
+<meta property="og:description" content="Sechs kurze Fragen, zwei Minuten, eine ehrliche Einschätzung. Die Auswertung läuft in Deinem Browser. Gespeichert wird nur, wenn Du das Ergebnis per E-Mail anforderst.">
 <meta property="og:url" content="https://business.cogether.de/praxis-check/">
 <meta property="og:image" content="https://business.cogether.de/assets/img/og-business.png">
 <meta property="og:image:width" content="1200">
@@ -88,7 +88,7 @@
   <div class="sv2-wrap pc-wrap" style="text-align:center">
     <span class="sv2-eyebrow" style="justify-content:center;display:inline-flex;width:100%">Praxis-Check · 2 Minuten</span>
     <h1 class="sv2-h2" style="max-width:24ch;margin-inline:auto">Wie viel Struktur braucht Dein Coaching-Betrieb?</h1>
-    <p class="sv2-lead" style="margin-inline:auto">Sechs kurze Fragen, eine ehrliche Einschätzung. Du erfährst, ob ein gemeinsames System bei Dir heute sinnvoll ist und wo es am meisten verändern würde. Deine Antworten werden nur in Deinem Browser ausgewertet und nicht gespeichert.</p>
+    <p class="sv2-lead" style="margin-inline:auto">Sechs kurze Fragen, eine ehrliche Einschätzung. Du erfährst, ob ein gemeinsames System bei Dir heute sinnvoll ist und wo es am meisten verändern würde. Deine Antworten werden in Deinem Browser ausgewertet. Gespeichert wird nur, wenn Du Dir das Ergebnis per E-Mail schicken lässt.</p>
   </div>
 </section>
 
@@ -165,7 +165,7 @@
       <div class="pc-card">
         <label for="pc-open" style="display:block;font-weight:700;color:var(--sv2-ink,#122a3b);margin:0 0 .8rem;line-height:1.4"><span class="pc-num">7</span>Was wäre für Dich der größte Gewinn, wenn die organisatorische Seite Deines Coachings deutlich leichter laufen würde? <small style="font-weight:500;color:var(--sv2-muted,#65777a)">(freiwillig)</small></label>
         <textarea id="pc-open" maxlength="1500" autocomplete="off"></textarea>
-        <p class="pc-note">Diese Antwort bleibt in Deinem Browser. Wenn Du magst, nimmst Du sie mit ins Erstgespräch.</p>
+        <p class="pc-note">Diese Antwort bleibt in Deinem Browser und wird auch bei der E-Mail-Option nicht übertragen. Wenn Du magst, nimmst Du sie mit ins Erstgespräch.</p>
       </div>
 
       <div class="pc-actions">
@@ -229,7 +229,7 @@ document.getElementById('navtoggle').addEventListener('click', function(){
 });
 </script>
 <script>
-/* Praxis-Check: Auswertung nur im Browser, keine Speicherung, keine Übertragung der Antworten. */
+/* Praxis-Check: Auswertung im Browser. Übertragen wird nur auf Wunsch (E-Mail-Option): E-Mail, Stufe, Größe, Herkunft; nie der Freitext. */
 (function(){
   var form = document.getElementById('pc-form');
   var btn = document.getElementById('pc-submit');
@@ -305,6 +305,40 @@ document.getElementById('navtoggle').addEventListener('click', function(){
       });
       card.appendChild(copy);
       card.appendChild(el('p', 'pc-small', 'Sie ist nirgends gespeichert. Nimm sie mit, wenn Du ein Erstgespräch buchst.'));
+    }
+
+    if (band !== 'gering') {
+      var tierKey = start ? 'start' : 'grow';
+      var sizeKey = v.q1 <= 1 ? 'solo' : (v.q1 <= 3 ? 'small' : 'group');
+      var openedAt = Date.now();
+      var mf = el('form', 'pc-mail'); mf.noValidate = true; mf.style.marginTop = '1.2rem';
+      mf.innerHTML = '<h3>Ergebnis per E-Mail erhalten</h3>' +
+        '<p class="pc-small">Optional. Du bekommst Deine Kurzauswertung mit der passenden Stufe und dem Link dazu.</p>' +
+        '<input type="email" name="email" autocomplete="email" placeholder="Deine E-Mail-Adresse" required style="width:100%;padding:.7rem .9rem;border:1px solid #cfe0e2;border-radius:10px;font:inherit;margin:.4rem 0">' +
+        '<div style="position:absolute;left:-9999px" aria-hidden="true"><input type="text" name="website" tabindex="-1" autocomplete="off"></div>' +
+        '<label class="pc-small" style="display:block;margin:.4rem 0"><input type="checkbox" name="consent" value="1"> Ich möchte mein Ergebnis per E-Mail erhalten. Das CoGether-Team darf mich dazu einmalig persönlich kontaktieren. Es gilt die <a href="https://cogether.de/datenschutz/" target="_blank" rel="noopener">Datenschutzerklärung</a>.</label>' +
+        '<label class="pc-small" style="display:block;margin:.4rem 0"><input type="checkbox" name="sequence" value="1"> Optional: Ich möchte zusätzlich vier kurze Mails zum Paket in den nächsten zehn Tagen erhalten. Ich bestätige das per Link in einer Mail und kann mich jederzeit abmelden.</label>' +
+        '<button type="submit" class="pc-btn pc-btn--ghost">Ergebnis senden</button><p class="pc-small pc-mailmsg" role="status"></p>';
+      mf.addEventListener('submit', function(e){
+        e.preventDefault();
+        var msg = mf.querySelector('.pc-mailmsg'), b = mf.querySelector('button');
+        var email = mf.email.value.trim();
+        if (email.indexOf('@') < 1 || email.indexOf('.') < 0) { msg.textContent = 'Bitte gib eine gültige E-Mail-Adresse ein.'; return; }
+        if (!mf.consent.checked) { msg.textContent = 'Bitte stimme dem Datenschutzhinweis zu.'; return; }
+        var seq = mf.sequence.checked;
+        b.disabled = true; msg.textContent = 'Wird gesendet …';
+        var q = new URLSearchParams(location.search);
+        var body = new URLSearchParams({email: email, tier: tierKey, size: sizeKey, consent: '1', sequence: seq ? '1' : '', website: mf.website.value, ts: String(openedAt),
+          utm_source: q.get('utm_source') || 'praxis-check', utm_medium: q.get('utm_medium') || 'selbstcheck', utm_campaign: q.get('utm_campaign') || 'coach-check', ref: document.referrer || '', page: location.href.slice(0, 300)});
+        fetch('https://cogether.de/wp-json/cogether/v1/funnel/finder', {method: 'POST', body: body, mode: 'cors'})
+          .then(function(r){ return r.json().catch(function(){ return {}; }).then(function(j){ return {status: r.status, json: j}; }); })
+          .then(function(x){
+            if (x.json && x.json.ok) { mf.innerHTML = '<p><strong>Danke!</strong> Wir haben Dir Dein Ergebnis per E-Mail geschickt.' + (seq ? ' Bitte bestätige außerdem in der zweiten Mail Deine Anmeldung zur Mail-Folge.' : '') + ' Schau auch im Spam-Ordner nach, falls nichts ankommt.</p>'; }
+            else { b.disabled = false; msg.textContent = x.status === 429 ? 'Zu viele Versuche. Bitte warte kurz.' : 'Das hat leider nicht geklappt. Bitte prüfe die Angaben oder buche direkt einen Termin.'; }
+          })
+          .catch(function(){ b.disabled = false; msg.textContent = 'Verbindung fehlgeschlagen. Bitte versuche es erneut oder buche direkt einen Termin.'; });
+      });
+      card.appendChild(mf);
     }
 
     var utm = '?utm_source=praxis-check&utm_medium=selbstcheck&utm_campaign=coach-check&utm_content=fit-' + band;
