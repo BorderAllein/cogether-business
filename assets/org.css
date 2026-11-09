@@ -429,3 +429,45 @@ body{background:var(--sand);color:#fff}
  .ph{padding:4.2rem 0 3.4rem;min-height:0}
  .ph--c:after{width:100%;opacity:.22;-webkit-mask-image:linear-gradient(180deg,#000,transparent);mask-image:linear-gradient(180deg,#000,transparent)}
 }
+
+/* ===== V6: weiße Heros, ruhigere Buttons (wenig Orange) ===== */
+.ph{background:#faf8f4;color:#0b1723;border-bottom:1px solid rgba(11,23,35,.08)}
+.ph:before{display:none}
+.ph h1{color:#0b1723;text-shadow:none}
+.ph .lede{color:#3d4f5b}
+.ph .eyebrow,.ph .crumbs,.ph .crumbs a{color:#5b6e78}
+.ph .crumbs a:hover{color:#0b1723}
+.ph--a:after,.ph--b:after,.ph--c:after{opacity:1!important;width:58%;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 55%),linear-gradient(180deg,#000 75%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0%,#000 55%),linear-gradient(180deg,#000 75%,transparent);mask-composite:intersect}
+.ph--a:after{background-position:68% 30%}
+.ph--b:after{background-position:center 20%}
+.ph--c:after{background:url(/assets/img/sven-mikro.jpg) 78% 28%/cover no-repeat}
+.ph .wrap>*{max-width:640px}
+.ph .wrap>.crumbs{max-width:none}
+
+/* Buttons: Navy/Petrol statt Orange */
+.btn--p{background:#0c3a4a;color:#fff!important;box-shadow:0 14px 28px -16px rgba(12,58,74,.9)}
+.btn--p:hover{background:#0f4f63}
+.dk .btn--p,.cta-full .btn--p,.pband .btn--p,.darkband .btn--p,.hd .btn--p,.on-dark .btn--p{background:#fff;color:#0c2231!important;box-shadow:0 14px 30px -18px rgba(0,0,0,.8)}
+.dk .btn--p:hover,.cta-full .btn--p:hover,.pband .btn--p:hover,.darkband .btn--p:hover,.hd .btn--p:hover,.on-dark .btn--p:hover{background:#e6f4f6}
+.light .pkg--hot .btn--p{background:#fff;color:#0c2231!important}
+.nav .nav__cta{background:#fff;color:#0c2231!important}
+.tag{background:#0c3a4a}
+.light .step i,.step i{background:#0c3a4a}
+.eyebrow:before{background:#8fd0d8}.light .eyebrow:before,.h-hero .eyebrow:before,.ph .eyebrow:before{background:#078b9c}
+.num,.light .num{color:#0b7d8c}
+.dk .num,.darkband .num{color:#8fd0d8}
+.week small,.light .week small{color:#0b7d8c}
+.facts div,.light .facts div{border-top-color:#078b9c}
+.stats--big .stat{border-left-color:#8fd0d8}
+.ticks li:before{color:#8fd0d8}
+
+/* Lesbarkeit auf Foto-Bändern */
+.dk--a:before,.dk--b:before,.dk--c:before,.cta-full:before,.darkband:before{filter:none}
+.dk .card,.darkband .card{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.2)}
+.dk .card p,.dk p{color:rgba(255,255,255,.86)}
+
+@media(max-width:960px){
+ .ph--a:after,.ph--b:after,.ph--c:after{width:100%;height:260px;bottom:auto;opacity:.9!important;-webkit-mask-image:linear-gradient(180deg,#000 35%,transparent);mask-image:linear-gradient(180deg,#000 35%,transparent);-webkit-mask-composite:source-over;mask-composite:add}
+ .ph{padding-top:15rem}
+ .ph .wrap>*{max-width:none}
+}
