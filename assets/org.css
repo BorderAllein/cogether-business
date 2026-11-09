@@ -544,3 +544,9 @@ body{background:var(--sand);color:#fff}
 .bx--4{grid-column:6/13;margin-top:2.6rem;z-index:3;padding-left:calc(16.6% + 1.4rem)}
 .bx--2{padding-left:calc(16% + 1rem)}
 @media(max-width:960px){.bx--2,.bx--4{padding-left:1.8rem}}
+
+/* Info-Mappe */
+.mappe{display:flex;gap:1.6rem;align-items:center;justify-content:space-between;flex-wrap:wrap;background:#fff;border:1px solid rgba(11,23,35,.12);border-left:4px solid #078b9c;padding:1.8rem 2rem;box-shadow:0 24px 50px -38px rgba(11,23,35,.55);margin-top:2.4rem}
+.mappe h3{font:600 1.35rem/1.2 var(--serif);color:#0b1723;margin-bottom:.35rem}.mappe p{color:#3d4f5b;max-width:56ch;margin:0}
+.faq .mappe{margin-top:2.8rem}
+.ph .btn--o{border-color:#0b1723;color:#0b1723!important}.ph .btn--o:hover{background:rgba(11,23,35,.06)}
