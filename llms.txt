@@ -10,8 +10,15 @@
 
 ## Seiten
 
-- [Startseite](https://business.cogether.de/): Programm, Pakete, Ablauf, Fragen.
-- [Kontakt](https://business.cogether.de/kontakt/): kostenfreies Erstgespräch mit Sven.
+- [Startseite](https://business.cogether.de/)
+- [Programm](https://business.cogether.de/programm/): Lernweg, Live-Termine, persönlicher Bereich
+- [Für wen](https://business.cogether.de/fuer-wen/): Fachkräfte, Ehrenamtliche, Teams, Führungskräfte
+- [Pakete & Preise](https://business.cogether.de/pakete/)
+- [Zusammenarbeit](https://business.cogether.de/zusammenarbeit/): Ablauf und Formate
+- [Rahmen & Datenschutz](https://business.cogether.de/sicherheit/)
+- [Über uns](https://business.cogether.de/ueber-uns/): Sven und Angie
+- [Häufige Fragen](https://business.cogether.de/faq/)
+- [Kontakt](https://business.cogether.de/kontakt/)
 
 ## Verwandte Seiten
 
