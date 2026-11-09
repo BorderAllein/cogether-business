@@ -371,3 +371,61 @@ body{background:var(--sand);color:#fff}
 .pband--angie .pband__img{width:40%;background-size:cover;background-position:center 20%;-webkit-mask-image:linear-gradient(270deg,#000 55%,transparent);mask-image:linear-gradient(270deg,#000 55%,transparent)}
 @media(max-width:960px){.h-hero:after{width:100%}.pband--angie{min-height:0}.pband--angie .pband__img{width:100%}}
 @media(max-width:960px){.h-hero:after{height:400px;background-position:72% 20%}.h-hero__txt{padding:24.5rem 0 3.4rem}}
+
+/* ===== V5: Unterseiten – Hell/Dunkel-Wechsel, weiße Flächen, Foto-Bänder ===== */
+.light{padding:5.6rem 0;background:#fff}
+.light--sand{background:#f4f1ec}
+.light .card,.light .step,.light .week div,.light .pkg,.light .faq details{background:#fff;border:1px solid rgba(11,23,35,.1);box-shadow:0 24px 50px -38px rgba(11,23,35,.55)}
+.light--sand .card,.light--sand .pkg{background:#fff}
+.light .card h3,.light .pkg h3,.light .step b,.light .week b,.light .faq summary,.light .facts b,.light .price{color:#0b1723}
+.light .card p,.light .week p,.light .faq p,.light .facts div,.light li,.light .step span,.light .pkg .sub,.light .price small{color:#3d4f5b}
+.light .num{color:var(--orange)}
+.light .card--link:hover{border-color:#078b9c}
+.light .card--link .more,.light a:not(.btn){color:#2f6d76}
+.light .stat b{color:#0c4a58}.light .stat span{color:#3d4f5b}
+.light .chips li{background:#e8f5f6;color:#1d5964;border-color:rgba(7,139,156,.25)}
+.light .step i{background:#0c2231}
+.light .week small{color:var(--orange-deep)}
+.light .note{color:#6a7b86}
+.light .list li:before{background:#078b9c}
+.light .facts div{border-top-color:var(--orange)}
+.light .frame{box-shadow:0 40px 80px -46px rgba(11,23,35,.6)}
+.light .pkg li:before{color:#078b9c}
+.light .pkg--hot{background:linear-gradient(160deg,#0f5568,#0a2d3d);border-color:#0f5568;box-shadow:0 40px 80px -40px rgba(7,139,156,.8)}
+.light .pkg--hot h3,.light .pkg--hot .price{color:#fff}
+.light .pkg--hot .sub,.light .pkg--hot .price small,.light .pkg--hot li{color:rgba(255,255,255,.8)}
+.light .pkg--hot li:before{color:#8fd0d8}
+.light .btn--o{border-color:#0b1723;color:#0b1723!important}.light .btn--o:hover{background:rgba(11,23,35,.06)}
+.light .card--here{background:#e1f6f7;border-color:#078b9c}
+.light .person h2{color:#0b1723}.light .person .lede{color:#3d4f5b}.light .person .role{color:#2f6d76}
+.light .band{color:#fff}
+.light.floaty{background:#f4f1ec}
+.light .head .lede{color:#3d4f5b}
+
+/* Dunkle Foto-Sektionen */
+.dk{position:relative;padding:5.6rem 0;background:#050f16;color:#fff;isolation:isolate;overflow:hidden}
+.dk:before{content:"";position:absolute;inset:0;z-index:-1}
+.dk--a:before{background:linear-gradient(90deg,#050f16 0%,rgba(5,15,22,.9) 55%,rgba(5,15,22,.74) 100%),url(/assets/img/sven-founder-2026.png) center 30%/cover}
+.dk--b:before{background:linear-gradient(90deg,rgba(5,15,22,.78) 0%,#050f16 70%),url(/assets/img/human-photo-2026-08.jpg) left 22%/cover}
+.dk--c:before{background:linear-gradient(90deg,#050f16 0%,rgba(5,15,22,.86) 55%,rgba(5,15,22,.6) 100%),url(/assets/img/sven-mikro.jpg) right 30%/cover}
+.dk--plain{background:#07151e}
+.dk--plain:before{background:radial-gradient(900px 480px at 85% 0%,rgba(18,90,112,.35),transparent 70%)}
+.dk .head .lede,.dk .lede{color:rgba(255,255,255,.78)}
+.dk h2,.dk h3{color:#fff}
+
+/* Seitenköpfe: höher, mit Foto-Fade */
+.ph{padding:6.4rem 0 5rem;min-height:420px;display:flex;align-items:center}
+.ph .wrap{width:min(1180px,100% - 48px)}
+.ph h1{font-size:clamp(2.6rem,5.6vw,4.4rem);max-width:18ch}
+.ph--c:after{content:"";position:absolute;top:0;right:0;bottom:0;width:52%;z-index:-1;background:url(/assets/img/sven-mikro.jpg) 70% 28%/cover no-repeat;opacity:.6;-webkit-mask-image:linear-gradient(90deg,transparent,#000 58%);mask-image:linear-gradient(90deg,transparent,#000 58%)}
+.ph:after{opacity:.7!important}
+
+/* Personenzeilen auf dunkel */
+.dk .person img{box-shadow:0 40px 70px -40px rgba(0,0,0,.9)}
+.dk .person .lede{color:rgba(255,255,255,.8)}
+
+@media(max-width:960px){
+ .light,.dk{padding:3.6rem 0}
+ .ph{padding:4.2rem 0 3.4rem;min-height:0}
+ .ph--c:after{width:100%;opacity:.22;-webkit-mask-image:linear-gradient(180deg,#000,transparent);mask-image:linear-gradient(180deg,#000,transparent)}
+}
