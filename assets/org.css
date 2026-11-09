@@ -550,3 +550,24 @@ body{background:var(--sand);color:#fff}
 .mappe h3{font:600 1.35rem/1.2 var(--serif);color:#0b1723;margin-bottom:.35rem}.mappe p{color:#3d4f5b;max-width:56ch;margin:0}
 .faq .mappe{margin-top:2.8rem}
 .ph .btn--o{border-color:#0b1723;color:#0b1723!important}.ph .btn--o:hover{background:rgba(11,23,35,.06)}
+
+/* Tabellen */
+.tbl{width:100%;border-collapse:collapse;margin-top:2rem;background:#fff;box-shadow:0 24px 50px -38px rgba(11,23,35,.55);font-size:.98rem;color:#0b1723}
+.tbl th,.tbl td{padding:1rem 1.2rem;text-align:left;border-bottom:1px solid rgba(11,23,35,.1)}
+.tbl thead th{font:800 .72rem/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:#2f6d76;background:#f4f1ec}
+.tbl tbody th{font:600 1.05rem var(--serif)}
+.tbl tr.hot td,.tbl tr.hot th{background:#e8f5f6}
+.dk .week div{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.18)}.dk .week b{color:#fff}.dk .week small{color:#8fd0d8}.dk .week p{color:rgba(255,255,255,.8)}
+
+/* Hero-Fakten */
+.h-facts{display:grid;grid-template-columns:repeat(4,auto);gap:0;list-style:none;padding:0;margin:2.2rem 0 0;max-width:560px}
+.h-facts li{padding:0 1.3rem;border-left:2px solid #078b9c}
+.h-facts li:first-child{padding-left:1.1rem}
+.h-facts b{display:block;font:600 1.25rem/1.1 var(--serif);color:#0b1723}
+.h-facts span{font-size:.78rem;color:#3d4f5b}
+.h-hero__txt{max-width:600px}
+@media(max-width:960px){.h-facts{grid-template-columns:1fr 1fr;gap:1.1rem 0;max-width:none}.h-facts li{padding:0 1rem}}
+.h-facts{max-width:none;grid-template-columns:repeat(4,max-content)}
+.h-facts b{white-space:nowrap;font-size:1.15rem}
+.h-facts span{white-space:nowrap}
+@media(max-width:960px){.h-facts{grid-template-columns:1fr 1fr}}
