@@ -1,38 +1,19 @@
-# CoGether Business
+# CoGether für Organisationen
 
-> Coaching Software und Infrastruktur für professionelle Begleitung: Coaching, Mentoring, Beratung und Ausbildung in einem System. Für Solo-Coaches bis zu Unternehmen mit mehreren Coach-Bereichen. Herausgeber: BA Entertainment, Alleestraße 15, 42781 Haan. Kontakt: info@cogether.de.
+> Level You Up für Organisationen: ein Entwicklungsprogramm über sechs bis zwölf Monate für Fachkräfte, Ehrenamtliche, Teams und Führungskräfte. 24 wöchentliche Live-Termine à 75 Minuten in festen Gruppen mit 4 bis 6 Personen, persönlicher Bereich, anonymisierte Auswertung. Coaching, keine Psychotherapie. Herausgeber: BA Entertainment, Alleestraße 15, 42781 Haan. Kontakt: info@cogether.de.
 
-CoGether verbindet Klient:innen, Termine, Learning, Programme, Aufgaben und Vertrieb. Es gibt vier Stufen, die jeweils einen anderen Betriebszustand beschreiben. Einstieg ab 129 €/Monat (START). Alle Preise netto pro Monat zuzüglich einmaliger Einrichtung.
+## Pakete (netto, pro Person, ab 4 Personen)
 
-## Pakete
+- Pilot: 1.150 €
+- Standard: 1.400 € (empfohlen)
+- Premium: 1.817 € (mit Führungskräfte-Impuls, Abschluss-Workshop und Transferplan)
 
-- [START](https://business.cogether.de/start/): Professionell digital starten für Solo-Coaches und kleinere Betriebe. 129 €/Monat, 690 € einmalige Einrichtung.
-- [GROW](https://business.cogether.de/grow/): Wachstum systematisieren für mehr Klient:innen, Gruppen und Programme. 199 €/Monat, 1.490 € einmalige Einrichtung.
-- [PRO](https://business.cogether.de/pro/): Komplexität steuern für etablierte Unternehmen mit mehreren operativen Bereichen und Vertriebs-Arbeitsbereich. 399 €/Monat, 2.990 € einmalige Einrichtung.
-- [UNIVERSE](https://business.cogether.de/universe/): Individuelle Infrastruktur nach Bedarf, wenn Standardpakete nicht passen. Preis auf Anfrage.
+## Seiten
 
-## Für wen
+- [Startseite](https://business.cogether.de/): Programm, Pakete, Ablauf, Fragen.
+- [Kontakt](https://business.cogether.de/kontakt/): kostenfreies Erstgespräch mit Sven.
 
-- [Mentoring Software](https://business.cogether.de/mentoring-software/): für Mentor:innen und kleine Institute.
-- [Software für Berater:innen](https://business.cogether.de/software-fuer-berater/): für Beratung, die Menschen begleitet (nicht für Zeiterfassung oder Projektabrechnung).
-- [Software für Trainer:innen und Institute](https://business.cogether.de/software-fuer-trainer-und-institute/): für Programme und Ausbildungen über Monate.
+## Verwandte Seiten
 
-## Weitere Seiten
-
-- [Startseite](https://business.cogether.de/): Überblick, Vergleich der Stufen, häufige Fragen.
-- [Warum CoGether](https://business.cogether.de/warum-cogether/): Entstehung aus dem Podcast Border Allein, Haltung und Ecosystem.
-- [Karriere / Vertrieb](https://business.cogether.de/vertrieb/): Bewerbung als Vertriebspartner:in bei CoGether, Premium-Vertrieb ohne Druck mit klarer Verantwortung.
-- [Kontakt](https://business.cogether.de/kontakt/): Orientierung und Anfrage.
-
-## Einbindung
-
-CoGether kann in eine bestehende Website eingebunden werden (zum Beispiel Erstgespräch-Buchung, Anmeldung und Zugang zum Mitgliederbereich). Ein Umzug der Website ist nicht nötig. Der Umfang hängt von der Website ab und wird im Erstgespräch geklärt.
-
-## Kurzdefinition
-
-CoGether ist kein einzelnes Werkzeug, sondern die gemeinsame Infrastruktur, in der Coaches arbeiten und Klient:innen ihren Entwicklungsraum haben. Der Unterschied zwischen den Stufen liegt in Einrichtungstiefe und Prozesskomplexität, nicht in abgeschalteten Grundfunktionen.
-
-## Verwandte Angebote desselben Herausgebers
-
-- [CoGether Coaching und Wissen](https://cogether.de/): persönliches Coaching, Mentoring, Gruppenprogramme, Coach-Ausbildung und Wissensartikel.
-- [Border Allein](https://borderallein.de/): persönlicher Podcast von Sven über Selbstführung.
+- [CoGether, Coaching für Menschen](https://cogether.de/)
+- [CoGether Software für Coaches und Institute](https://cogether-software.de/)
