@@ -267,3 +267,107 @@ body{background:var(--sand);color:#fff}
  .statband .stat{border-left:0;padding-left:0}
  .band{padding:2.2rem}
 }
+
+/* ===== V4: Aufbau nach Referenz (hell/dunkel im Wechsel, Foto-Bänder) ===== */
+.light{--ink:#0b1723;--ink2:#3d4f5b;--muted:#6a7b86;--teal-deep:#2f6d76;background:#f4f1ec;color:#0b1723}
+.light h2,.light h3{color:#0b1723}.light .lede,.light p{color:#3d4f5b}
+.light .eyebrow{color:#2f6d76}
+.btn--d{background:#0c2231;color:#fff!important}.btn--d:hover{background:#123a4c}
+
+/* Hero hell */
+.h-hero{position:relative;background:#faf8f4;color:#0b1723;min-height:620px;display:flex;align-items:center;overflow:hidden;isolation:isolate}
+.h-hero:after{content:"";position:absolute;top:0;right:0;bottom:0;width:64%;z-index:-1;background:url(/assets/img/sven-mikro.jpg) 78% 30%/cover no-repeat;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 46%),linear-gradient(180deg,#000 78%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0%,#000 46%),linear-gradient(180deg,#000 78%,transparent);mask-composite:intersect}
+.h-hero__txt{max-width:600px;padding:5.5rem 0}
+.h-hero h1{font-size:clamp(2.7rem,5.6vw,4.7rem);color:#0b1723;margin-bottom:1.3rem}
+.h-hero h1 em{font-style:italic;font-weight:500;color:#2f6d76}
+.h-hero .lede{color:#3d4f5b;margin-bottom:2rem}
+.h-hero .eyebrow{color:#2f6d76}
+.h-hero .btn--o{border-color:#0b1723;color:#0b1723!important}.h-hero .btn--o:hover{background:rgba(11,23,35,.06)}
+
+/* Logo-Leiste */
+.logos{background:#fff;border-top:1px solid rgba(11,23,35,.1);border-bottom:1px solid rgba(11,23,35,.1);padding:1.8rem 0}
+.logos__row{display:flex;justify-content:space-between;align-items:center;gap:1.4rem 2.4rem;flex-wrap:wrap}
+.logos a{display:flex;flex-direction:column;text-decoration:none;color:#0b1723;line-height:1.1;opacity:.72;transition:opacity .2s}
+.logos a:hover{opacity:1}
+.logos b{font:800 1.15rem/1 var(--sans);letter-spacing:-.01em}
+.logos small{font:600 .66rem/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#6a7b86;margin-top:.35rem}
+
+/* Dunkles Band */
+.darkband{position:relative;background:#050f16;padding:5.4rem 0;isolation:isolate;overflow:hidden}
+.darkband:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#050f16 0%,rgba(5,15,22,.88) 50%,rgba(5,15,22,.8) 100%),url(/assets/img/human-photo-2026-08.jpg) center 30%/cover}
+.darkband__grid{display:grid;grid-template-columns:1.1fr .9fr;gap:4rem;align-items:center}
+.stats--big{grid-template-columns:1fr 1fr;gap:2.4rem 2rem;text-align:left}
+.stats--big .stat b{font-size:4.2rem;color:#fff}
+.stats--big .stat{border-left:2px solid var(--orange);padding-left:1.2rem}
+
+/* Schwebende Karten */
+.floaty{padding:5.5rem 0;position:relative;isolation:isolate;overflow:hidden}
+.floaty:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,#f4f1ec,rgba(244,241,236,.86)),url(/assets/img/sven-founder-2026.png) center/cover;opacity:1}
+.fcard{display:grid;grid-template-columns:1fr 1fr;background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 40px 80px -46px rgba(11,23,35,.55);width:min(960px,100%);margin-bottom:2.6rem;min-height:340px}
+.fcard--l{margin-right:auto}.fcard--r{margin-left:auto}
+.fcard__txt{padding:2.6rem 2.6rem;display:flex;flex-direction:column;gap:1rem;justify-content:center;align-items:flex-start}
+.fcard h3{font-size:1.7rem;color:#0b1723}
+.fcard p{color:#3d4f5b}
+.fcard__img{background-size:cover;background-position:center;min-height:260px}
+
+/* Personen-Bänder */
+.pband{position:relative;padding:7.5rem 0;background:#050f16;isolation:isolate;overflow:hidden}
+.pband__img{position:absolute;top:0;bottom:0;width:58%;z-index:-1;background-size:cover;background-position:center 20%}
+.pband--l .pband__img{left:0;-webkit-mask-image:linear-gradient(90deg,#000 45%,transparent);mask-image:linear-gradient(90deg,#000 45%,transparent)}
+.pband--r .pband__img{right:0;-webkit-mask-image:linear-gradient(270deg,#000 45%,transparent);mask-image:linear-gradient(270deg,#000 45%,transparent)}
+.pband--l .pband__txt{margin-left:auto;max-width:540px}
+.pband--r .pband__txt{max-width:540px}
+.pband--angie{background:linear-gradient(120deg,#1a1230 0%,#0d2231 70%)}
+.pband--angie .pband__img{background-size:auto 100%;background-repeat:no-repeat;background-position:right center;width:46%}
+.pband .h2{font-size:clamp(2.4rem,4.6vw,3.6rem)}
+
+/* Zickzack */
+.zig-sec{padding:5.5rem 0}
+.zig{display:grid;gap:1.6rem;margin-top:1rem}
+.zig__i{background:#fff;border-radius:20px;padding:2rem 2.2rem;width:min(560px,100%);box-shadow:0 30px 60px -40px rgba(11,23,35,.5);display:flex;flex-direction:column;gap:.8rem;align-items:flex-start}
+.zig__i--r{margin-left:auto}
+.zig__i h3{font-size:1.5rem}
+.zig .num{margin:0;font-size:2rem}
+
+/* Foto-CTA */
+.cta-full{position:relative;padding:7rem 0;text-align:center;isolation:isolate;overflow:hidden;background:#050f16}
+.cta-full:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(5,15,22,.88),rgba(5,15,22,.7)),url(/assets/img/sven-founder-2026.png) center 30%/cover}
+.cta-full .h2{max-width:20ch;margin-inline:auto;font-size:clamp(2.2rem,4.6vw,3.6rem)}
+.cta-full .lede{max-width:50ch}
+
+@media(max-width:960px){
+ .h-hero{min-height:0;align-items:flex-end}
+ .h-hero:after{width:100%;height:58%;top:0;bottom:auto;background-position:70% 22%;-webkit-mask-image:linear-gradient(180deg,#000 30%,transparent);mask-image:linear-gradient(180deg,#000 30%,transparent)}
+ .h-hero__txt{padding:17rem 0 3.4rem}
+ .darkband__grid{grid-template-columns:1fr;gap:2.4rem}
+ .darkband{padding:3.8rem 0}
+ .fcard{grid-template-columns:1fr;margin-bottom:1.8rem}
+ .fcard--r .fcard__img{order:-1}
+ .fcard__img{min-height:220px}.fcard__txt{padding:1.8rem}
+ .pband{padding:4rem 0}
+ .pband__img,.pband--angie .pband__img{position:relative;width:100%;height:340px;display:block;margin-bottom:1.6rem;z-index:0;-webkit-mask-image:linear-gradient(180deg,#000 55%,transparent);mask-image:linear-gradient(180deg,#000 55%,transparent)}
+ .pband{padding-top:0}
+ .pband__img{top:auto;bottom:auto}
+ .pband--angie .pband__img{background-position:center top;background-size:cover}
+ .pband--l .pband__txt,.pband--r .pband__txt{margin:0;max-width:none}
+ .zig-sec,.floaty{padding:3.6rem 0}
+ .zig__i,.zig__i--r{margin-left:0;width:100%}
+ .cta-full{padding:4.4rem 0}
+ .logos__row{justify-content:flex-start}
+}
+
+/* Feinschliff: Scroll-Reveal, ruhigere Details */
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.h-hero{min-height:min(760px,92vh)}
+.h-hero h1{letter-spacing:-.02em}
+.card,.fcard,.zig__i,.pkg{transition:transform .35s cubic-bezier(.2,.7,.2,1),box-shadow .35s}
+.fcard:hover,.zig__i:hover{transform:translateY(-4px)}
+.btn{letter-spacing:.01em}
+@media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none}}
+.h-hero:after{width:60%;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 56%),linear-gradient(180deg,#000 78%,transparent);mask-image:linear-gradient(90deg,transparent 0%,#000 56%),linear-gradient(180deg,#000 78%,transparent)}
+.h-hero__txt{max-width:560px}
+.pband--angie{min-height:480px}
+.pband--angie .pband__img{width:40%;background-size:cover;background-position:center 20%;-webkit-mask-image:linear-gradient(270deg,#000 55%,transparent);mask-image:linear-gradient(270deg,#000 55%,transparent)}
+@media(max-width:960px){.h-hero:after{width:100%}.pband--angie{min-height:0}.pband--angie .pband__img{width:100%}}
+@media(max-width:960px){.h-hero:after{height:400px;background-position:72% 20%}.h-hero__txt{padding:24.5rem 0 3.4rem}}
