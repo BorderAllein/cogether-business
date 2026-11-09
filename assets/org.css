@@ -225,14 +225,14 @@ body{background:var(--sand);color:#fff}
 .ph{background:#06121a;border-bottom:1px solid rgba(255,255,255,.1);position:relative;overflow:hidden;padding:5.2rem 0 4rem;isolation:isolate}
 .ph:before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(900px 420px at 82% 0%,rgba(18,90,112,.55),transparent 70%)}
 .ph--a:after,.ph--b:after{content:"";position:absolute;top:0;right:0;bottom:0;width:52%;z-index:-1;background-size:cover;opacity:.55;-webkit-mask-image:linear-gradient(90deg,transparent,#000 55%);mask-image:linear-gradient(90deg,transparent,#000 55%)}
-.ph--a:after{background-image:url(/assets/img/sven-founder-2026.png);background-position:70% 30%}
+.ph--a:after{background-image:url(/assets/img/sven-founder-2026.jpg);background-position:70% 30%}
 .ph--b:after{background-image:url(/assets/img/human-photo-2026-08.jpg);background-position:center 22%}
 .crumbs,.crumbs a{color:rgba(255,255,255,.6)}
 .ph h1{color:#fff;text-shadow:0 2px 30px rgba(0,0,0,.4)}
-.band{background:linear-gradient(100deg,rgba(6,18,26,.95) 0%,rgba(6,18,26,.72) 55%,rgba(6,18,26,.35) 100%),url(/assets/img/sven-founder-2026.png) center 30%/cover;border:1px solid rgba(255,255,255,.14);padding:4rem 3.4rem}
+.band{background:linear-gradient(100deg,rgba(6,18,26,.95) 0%,rgba(6,18,26,.72) 55%,rgba(6,18,26,.35) 100%),url(/assets/img/sven-founder-2026.jpg) center 30%/cover;border:1px solid rgba(255,255,255,.14);padding:4rem 3.4rem}
 
 /* Hero mit Foto */
-.hero--photo{background:linear-gradient(90deg,#06121a 0%,rgba(6,18,26,.92) 34%,rgba(6,18,26,.4) 70%,rgba(6,18,26,.15) 100%),linear-gradient(180deg,rgba(6,18,26,.35),rgba(6,18,26,.05) 40%,#06121a 100%),url(/assets/img/sven-founder-2026.png) 78% 22%/cover no-repeat;padding:8rem 0 7rem;min-height:640px;display:flex;align-items:center}
+.hero--photo{background:linear-gradient(90deg,#06121a 0%,rgba(6,18,26,.92) 34%,rgba(6,18,26,.4) 70%,rgba(6,18,26,.15) 100%),linear-gradient(180deg,rgba(6,18,26,.35),rgba(6,18,26,.05) 40%,#06121a 100%),url(/assets/img/sven-founder-2026.jpg) 78% 22%/cover no-repeat;padding:8rem 0 7rem;min-height:640px;display:flex;align-items:center}
 .hero--photo .wrap{width:min(1180px,100% - 48px)}
 .hero__txt{max-width:640px}
 .hero--photo h1{font-size:clamp(2.8rem,6.4vw,5.2rem);line-height:1.04;text-shadow:0 2px 40px rgba(0,0,0,.5)}
@@ -260,7 +260,7 @@ body{background:var(--sand);color:#fff}
 @media(max-width:960px){
  .nav{background:#0a1b27;border-bottom-color:rgba(255,255,255,.14)}
  .nav a{border-bottom-color:rgba(255,255,255,.12)}
- .hero--photo{padding:5rem 0 4.5rem;min-height:0;background:linear-gradient(180deg,rgba(6,18,26,.7) 0%,rgba(6,18,26,.9) 60%,#06121a 100%),url(/assets/img/sven-founder-2026.png) 70% 20%/cover no-repeat}
+ .hero--photo{padding:5rem 0 4.5rem;min-height:0;background:linear-gradient(180deg,rgba(6,18,26,.7) 0%,rgba(6,18,26,.9) 60%,#06121a 100%),url(/assets/img/sven-founder-2026.jpg) 70% 20%/cover no-repeat}
  .ph--a:after,.ph--b:after{width:100%;opacity:.22;-webkit-mask-image:linear-gradient(180deg,#000,transparent);mask-image:linear-gradient(180deg,#000,transparent)}
  .photo-sec{padding:4.5rem 0}.photo-sec--sven:before{background:linear-gradient(180deg,rgba(6,18,26,.55),rgba(6,18,26,.96) 70%),url(/assets/img/human-photo-2026-08.jpg) center top/cover no-repeat}
  .photo-sec{padding-top:16rem}
@@ -302,7 +302,7 @@ body{background:var(--sand);color:#fff}
 
 /* Schwebende Karten */
 .floaty{padding:5.5rem 0;position:relative;isolation:isolate;overflow:hidden}
-.floaty:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,#f4f1ec,rgba(244,241,236,.86)),url(/assets/img/sven-founder-2026.png) center/cover;opacity:1}
+.floaty:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,#f4f1ec,rgba(244,241,236,.86)),url(/assets/img/sven-founder-2026.jpg) center/cover;opacity:1}
 .fcard{display:grid;grid-template-columns:1fr 1fr;background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 40px 80px -46px rgba(11,23,35,.55);width:min(960px,100%);margin-bottom:2.6rem;min-height:340px}
 .fcard--l{margin-right:auto}.fcard--r{margin-left:auto}
 .fcard__txt{padding:2.6rem 2.6rem;display:flex;flex-direction:column;gap:1rem;justify-content:center;align-items:flex-start}
@@ -331,7 +331,7 @@ body{background:var(--sand);color:#fff}
 
 /* Foto-CTA */
 .cta-full{position:relative;padding:7rem 0;text-align:center;isolation:isolate;overflow:hidden;background:#050f16}
-.cta-full:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(5,15,22,.88),rgba(5,15,22,.7)),url(/assets/img/sven-founder-2026.png) center 30%/cover}
+.cta-full:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(5,15,22,.88),rgba(5,15,22,.7)),url(/assets/img/sven-founder-2026.jpg) center 30%/cover}
 .cta-full .h2{max-width:20ch;margin-inline:auto;font-size:clamp(2.2rem,4.6vw,3.6rem)}
 .cta-full .lede{max-width:50ch}
 
@@ -405,7 +405,7 @@ body{background:var(--sand);color:#fff}
 /* Dunkle Foto-Sektionen */
 .dk{position:relative;padding:5.6rem 0;background:#050f16;color:#fff;isolation:isolate;overflow:hidden}
 .dk:before{content:"";position:absolute;inset:0;z-index:-1}
-.dk--a:before{background:linear-gradient(90deg,#050f16 0%,rgba(5,15,22,.9) 55%,rgba(5,15,22,.74) 100%),url(/assets/img/sven-founder-2026.png) center 30%/cover}
+.dk--a:before{background:linear-gradient(90deg,#050f16 0%,rgba(5,15,22,.9) 55%,rgba(5,15,22,.74) 100%),url(/assets/img/sven-founder-2026.jpg) center 30%/cover}
 .dk--b:before{background:linear-gradient(90deg,rgba(5,15,22,.78) 0%,#050f16 70%),url(/assets/img/human-photo-2026-08.jpg) left 22%/cover}
 .dk--c:before{background:linear-gradient(90deg,#050f16 0%,rgba(5,15,22,.86) 55%,rgba(5,15,22,.6) 100%),url(/assets/img/sven-mikro.jpg) right 30%/cover}
 .dk--plain{background:#07151e}
@@ -471,3 +471,31 @@ body{background:var(--sand);color:#fff}
  .ph{padding-top:15rem}
  .ph .wrap>*{max-width:none}
 }
+
+/* ===== V7: verschachtelte Feature-Zeilen (Karte + überlappendes Medium) ===== */
+.frows{padding:6rem 0}
+.frow{position:relative;display:grid;grid-template-columns:1.05fr 1fr;width:min(1080px,100%);background:#fff;box-shadow:0 34px 80px -44px rgba(11,23,35,.55);margin:0 0 7rem;color:#0b1723}
+.frow:last-child{margin-bottom:0}
+.frow--r{margin-right:auto}
+.frow--l{margin-left:auto;grid-template-columns:1fr 1.05fr}
+.frow__txt{padding:3.2rem 3.2rem 3.4rem;display:flex;flex-direction:column;align-items:flex-start}
+.frow__txt h2{font:600 clamp(1.8rem,2.8vw,2.3rem)/1.12 var(--serif);color:#0b1723;letter-spacing:-.01em}
+.frow__txt h2:after{content:"";display:block;width:68px;height:3px;background:#078b9c;margin-top:1.1rem}
+.frow__lead{font:500 1.15rem/1.45 var(--sans);color:#0b1723!important;margin:1.4rem 0 1rem}
+.frow__txt p{color:#3d4f5b;margin-bottom:1rem}
+.frow__txt .list{margin:.4rem 0 1.4rem}
+.frow__txt .btn{margin-top:.8rem}
+.frow__media{position:relative;z-index:1;background-size:cover;background-repeat:no-repeat;box-shadow:0 34px 70px -30px rgba(0,0,0,.6);min-height:330px;align-self:start}
+.frow--r .frow__media{margin:-2.6rem -2.6rem 0 0}
+.frow--l .frow__media{margin:0 0 -2.6rem -2.6rem;align-self:end}
+.frows .frow+.frow{margin-top:0}
+.floaty.frows:before{background:linear-gradient(180deg,#f4f1ec,rgba(244,241,236,.9)),url(/assets/img/sven-founder-2026.jpg) center/cover}
+@media(max-width:960px){
+ .frows{padding:3.6rem 0}
+ .frow,.frow--l{grid-template-columns:1fr;margin-bottom:3.4rem}
+ .frow--r .frow__media,.frow--l .frow__media{order:-1;margin:-1.6rem 1rem 0 1rem;min-height:230px;align-self:auto}
+ .frow--l .frow__media{margin-bottom:0}
+ .frow__txt{padding:2rem 1.6rem 2.2rem}
+}
+.frow__media,.frow--r .frow__media,.frow--l .frow__media{align-self:stretch;min-height:300px}
+@media(max-width:960px){.frow__media,.frow--r .frow__media,.frow--l .frow__media{align-self:auto;min-height:230px}}
