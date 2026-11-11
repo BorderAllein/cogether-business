@@ -598,3 +598,5 @@ body{background:var(--sand);color:#fff}
 @media(prefers-reduced-motion:reduce){.btn:before,.btn:after{transition:none}}
 .h-hero__txt{max-width:660px}
 .btn{letter-spacing:.09em;padding:1.1rem 1.55rem}
+
+.soc-row{margin:1rem 0 0;font-size:.9rem;opacity:.9}.soc-row a{color:inherit;text-decoration:underline;text-underline-offset:3px}
